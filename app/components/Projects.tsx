@@ -1,0 +1,43 @@
+import React from "react";
+import { ProjectItem } from "../lib/resume";
+import Link from "next/link";
+import Chip from "./Chip";
+
+export default function Projects({ items }: { items: ProjectItem[] }) {
+  return (
+    <div className="grid md:grid-cols-2 gap-4">
+      {items.map((p) => (
+        <div key={p.title} className="card p-4">
+          <div className="flex items-baseline justify-between">
+            <h3 className="text-base font-semibold">{p.title}</h3>
+            {p.period && <span className="text-xs muted">{p.period}</span>}
+          </div>
+          {p.stack && (
+            <div className="mt-2 flex flex-wrap">
+              {p.stack.map((s, idx) => (
+                <Chip key={s} i={idx}>{s}</Chip>
+              ))}
+            </div>
+          )}
+          <p className="mt-2 text-sm">{p.summary}</p>
+          {p.details && (
+            <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
+              {p.details.map((d, i) => (
+                <li key={i}>{d}</li>
+              ))}
+            </ul>
+          )}
+          {p.links && (
+            <div className="mt-3 flex flex-wrap gap-3">
+              {p.links.map((l) => (
+                <Link key={l.url} href={l.url} target="_blank" className="text-amber-400 hover:text-amber-300 underline underline-offset-4">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}

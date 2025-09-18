@@ -1,8 +1,43 @@
 @import "tailwindcss";
 
-:root {
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #e5e5e5;
+  --muted: #b3b3b3;
+  --heading: #fbbf24;
+  --card-bg: #0f0f12;
+  --card-border: rgba(245, 158, 11, .28);
+  --chip-bg-1: rgba(245,158,11,.15);
+  --chip-border-1: rgba(245,158,11,.35);
+  --chip-text-1: #fbbf24;
+  --chip-bg-2: rgba(59,130,246,.12);
+  --chip-border-2: rgba(59,130,246,.35);
+  --chip-text-2: #93c5fd;
+  --chip-bg-3: rgba(16,185,129,.12);
+  --chip-border-3: rgba(16,185,129,.35);
+  --chip-text-3: #6ee7b7;
+  --link: #fbbf24;
+  --link-hover: #fde68a;
+}
+
+:root[data-theme="light"] {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  --muted: #334155;
+  --heading: #b45309;
+  --card-bg: #f3f4f6; /* 统一为更浅、更接近项目卡片的底色 */
+  --card-border: rgba(245, 158, 11, .35);
+  --chip-bg-1: #fff7ed;
+  --chip-border-1: #fdba74;
+  --chip-text-1: #b45309;
+  --chip-bg-2: #eff6ff;
+  --chip-border-2: #93c5fd;
+  --chip-text-2: #1d4ed8;
+  --chip-bg-3: #ecfdf5;
+  --chip-border-3: #6ee7b7;
+  --chip-text-3: #047857;
+  --link: #b45309;
+  --link-hover: #ea580c;
 }
 
 @theme inline {
@@ -24,3 +59,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 火焰橙黄主色系增强 */
+.text-flame { color: #f59e0b; }
+.bg-flame { background-color: #f59e0b; }
+.border-flame { border-color: rgba(245, 158, 11, .5); }
+
+/* 打印为 A4，隐藏导出按钮容器 */
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  .no-print { display: none !important; }
+  body { background: #ffffff; color: #111111; }
+}
+
+/* 链接统一风格，随主题变化 */
+a.custom-link { color: var(--link); text-decoration: underline; text-underline-offset: 4px; }
+a.custom-link:hover { color: var(--link-hover); }
+
+/* 通用卡片与文本 */
+.card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: .5rem; transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 10px 24px rgba(245,158,11,.15); }
+.muted { color: var(--muted); }
+.heading { color: var(--heading); }
