@@ -65,11 +65,28 @@ body {
 .bg-flame { background-color: #f59e0b; }
 .border-flame { border-color: rgba(245, 158, 11, .5); }
 
-/* 打印为 A4，隐藏导出按钮容器 */
+/* 打印为 A4，隐藏导出按钮容器和侧边栏 */
 @media print {
   @page { size: A4 portrait; margin: 12mm; }
   .no-print { display: none !important; }
   body { background: #ffffff; color: #111111; }
+  
+  /* 确保侧边栏和遮罩在打印时完全隐藏 */
+  [data-sidebar], 
+  .fixed.top-4.right-4,
+  .fixed.inset-0,
+  .fixed.top-0.right-0 {
+    display: none !important;
+  }
+  
+  /* 确保简历内容在打印时正常显示 */
+  #resume-root {
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 /* 链接统一风格，随主题变化 */

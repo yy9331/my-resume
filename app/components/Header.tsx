@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { resumeData } from "../lib/resume";
+import { useLanguage } from "../contexts/LanguageContext";
+import { resumeDataEn, resumeDataZh } from "../lib/i18n";
 import Chip from "./Chip";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
+  const { language } = useLanguage();
+  const resumeData = language === 'en' ? resumeDataEn : resumeDataZh;
+
   return (
     <header className="relative overflow-hidden card rounded-xl p-6">
       <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full" style={{ background: 'rgba(251,191,36,.15)' }} />
@@ -42,7 +46,7 @@ export default function Header() {
             <Chip>TypeScript</Chip>
           </div>
         </div>
-        <div className="flex-shrink-0 flex flex-col items-center gap-3">
+        <div className="flex-shrink-0">
           <Image
             src="/avatar.JPG"
             alt="头像"
@@ -51,9 +55,6 @@ export default function Header() {
             className="rounded-xl border-2 border-amber-400/20 shadow-lg"
             priority
           />
-          <div className="no-print">
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     </header>
