@@ -42,7 +42,7 @@ export type ResumeData = {
 
 export const resumeData: ResumeData = {
   name: "余翼",
-  title: "全栈工程师（React / Next.js / Electron / Node）",
+  title: "全栈工程师（ Next.js/ Node / Electron / Angular ）",
   contacts: {
     phone: "13143745768",
     emails: ["yuyi.gz@163.com", "yuyi.gz@gmail.com"],

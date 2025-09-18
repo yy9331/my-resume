@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "余翼 全栈Nextjs 8年经验 13143755768 一本统招",
   description: "余翼 · 全栈工程师（React/Next.js/Electron/Node）",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/favicon-32x32.png',
+  },
 };
 
 export default function RootLayout({
