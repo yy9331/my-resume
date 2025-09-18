@@ -42,10 +42,10 @@ export type ResumeData = {
 
 export const resumeData: ResumeData = {
   name: "余翼",
-  title: "全栈工程师（ Next.js/ Node / Electron / Angular ）",
+  title: "全栈工程师（ Next.js / Node / DApp / Electron ）",
   contacts: {
-    phone: "13143745768",
-    emails: ["yuyi.gz@163.com", "yuyi.gz@gmail.com"],
+    phone: "+86 13143745768",
+    emails: ["yuyi.gz@gmail.com", "yuyi.gz@163.com",],
     location: "籍贯汕头，现居广州"
   },
   links: [
@@ -63,14 +63,6 @@ export const resumeData: ResumeData = {
     "工程化沉淀：多处封装复用，显著提升团队交付效率"
   ],
   experiences: [
-    {
-      period: "2025 - 至今",
-      company: "多项合约/钱包/区块链项目",
-      role: "全栈开发",
-      bullets: [
-        "负责从智能合约到前后端的一体化交付，详见项目经验与成果"
-      ]
-    },
     {
       period: "2024.06 – 2025.06",
       company: "广州市友谊对外服务有限公司 · 国泰航空 CXA 项目组",

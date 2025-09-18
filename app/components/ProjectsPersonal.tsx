@@ -1,9 +1,18 @@
+"use client";
 import React from "react";
-import { ProjectItem } from "../lib/resume";
 import Link from "next/link";
 import Chip from "./Chip";
 
-export default function Projects({ items }: { items: ProjectItem[] }) {
+type Item = {
+  title: string;
+  period?: string;
+  summary: string;
+  links?: { label: string; url: string }[];
+  details?: string[];
+  stack?: string[];
+};
+
+export default function ProjectsPersonal({ items }: { items: Item[] }) {
   return (
     <div className="grid md:grid-cols-2 gap-4">
       {items.map((p) => (
@@ -51,3 +60,5 @@ export default function Projects({ items }: { items: ProjectItem[] }) {
     </div>
   );
 }
+
+

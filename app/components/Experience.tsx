@@ -21,10 +21,17 @@ export default function Experience({ items }: { items: ExperienceItem[] }) {
               ))}
             </div>
           )}
-          <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
-            {exp.bullets.map((b, i) => (
-              <li key={i}>{b}</li>
-            ))}
+          <ul className="mt-2 list-disc pl-5 text-sm space-y-1 marker:text-amber-400">
+            {exp.bullets.map((b, i) => {
+              const isSection = /[:：]$/.test(b.trim());
+              const isSub = b.trim().startsWith("- ");
+              const text = isSub ? b.trim().slice(2) : b;
+              return (
+                <li key={i} className={isSection ? "list-none mt-2 font-semibold" : isSub ? "ml-4" : undefined}>
+                  {text}
+                </li>
+              );
+            })}
           </ul>
         </li>
       ))}

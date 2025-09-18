@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { Section } from "./components/Section";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import ProjectsPersonal from "./components/ProjectsPersonal";
 import Skills from "./components/Skills";
 import Sidebar from "./components/Sidebar";
 import { useLanguage } from "./contexts/LanguageContext";
@@ -37,6 +38,12 @@ export default function Home() {
         <Section title={t.sections.experience}>
           <Experience items={resumeData.experiences} />
         </Section>
+
+        {resumeData.personalProjects && (
+          <Section title={language === 'en' ? 'Personal DApps' : '个人 DApp 项目'}>
+            <ProjectsPersonal items={resumeData.personalProjects as unknown as { title: string; period?: string; summary: string; links?: { label: string; url: string }[]; details?: string[]; stack?: string[]; }[]} />
+          </Section>
+        )}
 
         <Section title={t.sections.education}>
           <ul className="list-disc pl-5 text-sm text-zinc-300">

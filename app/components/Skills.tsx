@@ -5,6 +5,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 export type SkillKey =
   | "frontend"
+  | "web3"
   | "crossPlatform"
   | "testing"
   | "dataApi"
@@ -15,7 +16,11 @@ export type SkillKey =
   | "db"
   | "devops";
 
-export type SkillGroups = Record<SkillKey, string[]>;
+// Allow data to provide either `web3` or `dapp` key (backward compatible)
+export type SkillGroups = Omit<Record<SkillKey, string[]>, 'web3'> & {
+  web3?: string[];
+  dapp: string[];
+};
 
 export default function Skills({ data }: { data: SkillGroups }) {
   const { language } = useLanguage();
@@ -23,6 +28,7 @@ export default function Skills({ data }: { data: SkillGroups }) {
   const skillLabels = {
     en: {
       frontend: "Frontend",
+      web3: "DApp",
       crossPlatform: "Cross-platform",
       testing: "Testing",
       dataApi: "Data/API",
@@ -35,6 +41,7 @@ export default function Skills({ data }: { data: SkillGroups }) {
     },
     zh: {
       frontend: "前端",
+      web3: "DApp",
       crossPlatform: "跨端",
       testing: "测试",
       dataApi: "数据/API",
@@ -48,6 +55,8 @@ export default function Skills({ data }: { data: SkillGroups }) {
   };
 
   const groups: { label: string; key: SkillKey }[] = [
+    // 将 Web3 放在第一行，并在中大屏上独占一行
+    { label: skillLabels[language].web3, key: "web3" },
     { label: skillLabels[language].frontend, key: "frontend" },
     { label: skillLabels[language].crossPlatform, key: "crossPlatform" },
     { label: skillLabels[language].testing, key: "testing" },
@@ -60,12 +69,20 @@ export default function Skills({ data }: { data: SkillGroups }) {
     { label: skillLabels[language].devops, key: "devops" }
   ];
   return (
-    <div className="grid md:grid-cols-4 gap-4">
+    <div className="columns-1 md:columns-3 gap-4 [column-fill:_balance]">
       {groups.map((g) => (
-        <div key={`group-${g.key}`} className="card p-4">
+        <div
+          key={`group-${g.key}`}
+          className="card p-4 mb-4 inline-block w-full"
+          style={{ breakInside: 'avoid' }}
+        >
           <h4 className="text-sm font-semibold" style={{ color: 'var(--heading)' }}>{g.label}</h4>
           <div className="mt-2 flex flex-wrap">
-            {data[g.key].map((s: string, idx: number) => (
+            {(() => {
+              const record = data as unknown as Record<string, string[]>;
+              const list = record[g.key] ?? (g.key === 'web3' ? record['dapp'] : undefined) ?? [];
+              return list;
+            })().map((s: string, idx: number) => (
               <Chip key={`${g.key}-${s}-${idx}`} i={idx}>{s}</Chip>
             ))}
           </div>
