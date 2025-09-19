@@ -49,7 +49,7 @@ export interface ResumeDataI18n {
 }
 
 export const resumeDataEn: ResumeDataI18n = {
-  name: "Yu Yi",
+  name: "Yu Yi (Yves)",
   title: "Full Stack Engineer (Next.js/Node/Electron/Angular)",
   contacts: {
     phone: "+86 13143745768",
@@ -62,10 +62,10 @@ export const resumeDataEn: ResumeDataI18n = {
   ],
   summary: [
     "Focused on DApp/Web3 full‑stack delivery: Solidity/Hardhat + React/Next.js integration, wallet & EIP‑712 signing, on‑chain/off‑chain data flow and performance/security optimization.",
+    "Remote‑ready: solid async communication, documentation and overlap with APAC/EU time zones.",
     "8+ years of full-stack development experience, deep expertise in React ecosystem, with experience in designing and publishing public npm packages.",
-    "Proficient in Electron desktop development, Node/Next.js backend; practical experience with Java and Scala stream programming.",
     "Served Fortune 500 companies, capable of English meetings, communication, presentations, and written correspondence.",
-    "Remote‑ready: solid async communication, documentation and overlap with APAC/EU time zones."
+    "Proficient in Electron desktop development, Node/Next.js backend; practical experience with Java and Scala stream programming.",
   ],
   strengths: [
     "Rapid response and refactoring capabilities: Can combine AI suggestions for frontend component refactoring and optimization",
@@ -76,7 +76,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2024.06 – Present",
       company: "Rain Protocol",
-      role: "Senior Frontend Engineer (DeFi)",
+      role: "Senior DApp Engineer (DeFi Lending)",
       bullets: [
         "Own the frontend architecture and development for Rain.fi lending protocol",
         "Integrate Solana Programs with the app frontend",
@@ -93,7 +93,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2022.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "Senior Frontend Engineer (DEX)",
+      role: "Senior DApp Engineer (DEX)",
       bullets: [
         "Built liquidity engine UI based on Uniswap v4 hooks",
         "Developed liquidity shaping and dynamic fee adjustment modules",
@@ -256,9 +256,9 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["Plasmo Extension", "React", "TypeScript", "Tailwind", "Viem"],
       details: [
         "Tech Stack:",
-        "- Extension framework: Plasmo，前端 React/TS 与 Tailwind",
-        "- 钱包：助记词/私钥导入、资产列表、转账/铸造、自定义 Token",
-        "- Hooks：余额查询与订阅、Gas/Nonce 处理、错误兜底"
+        "- Extension framework: Plasmo, frontend with React/TS and Tailwind",
+        "- Wallet: mnemonic/private key import, asset listing, transfer/mint, custom tokens",
+        "- Hooks: balance queries and subscriptions, Gas/Nonce handling, error fallbacks"
       ]
     }
   ],
@@ -357,10 +357,10 @@ export const resumeDataZh: ResumeDataI18n = {
   ],
   summary: [
     "专注 DApp/Web3 全栈交付：Solidity/Hardhat 与 React/Next.js 集成，钱包接入与 EIP‑712 签名，链上/链下数据流与性能及安全优化。",
+    "适配远程：善于异步沟通与文档沉淀，可与亚太/欧洲时区重叠工作",
     "全栈开发8年+经验，深入 React 生态，具备公共 npm package 设计与发布经验。",
-    "熟悉 Electron 桌面端、Node/Next.js 后端；对 Java、Scala 流式编程有实践。",
     "服务过世界500强，能英文会议、交流、present与书面往来。",
-    "适配远程：善于异步沟通与文档沉淀，可与亚太/欧洲时区重叠工作"
+    "熟悉 Electron 桌面端、Node/Next.js 后端；对 Java、Scala 流式编程有实践。",
   ],
   strengths: [
     "快速响应与重构能力：能结合 AI 建议进行前端组件重构与优化",
@@ -371,7 +371,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2024.06 – 至今",
       company: "Rain Protocol",
-      role: "高级前端工程师（DeFi）",
+      role: "高级DApp工程师（DeFi 借贷方向）",
       bullets: [
         "负责 Rain.fi 借贷协议前端架构与开发",
         "参与 Solana Program 与前端的集成开发",
@@ -388,7 +388,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2022.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "高级前端工程师（DEX 方向）",
+      role: "高级DApp工程师（DEX 方向）",
       bullets: [
         "基于 Uniswap v4 hook 构建流动性引擎前端界面",
         "开发流动性塑形与动态费用调整功能模块",
@@ -652,6 +652,7 @@ export const translations = {
       theme: "Theme",
       language: "Language",
       export: "Export",
+      wallet: "Wallet",
       close: "Close Settings"
     }
   },
@@ -675,6 +676,7 @@ export const translations = {
       theme: "主题",
       language: "语言",
       export: "导出",
+      wallet: "钱包",
       close: "关闭设置"
     }
   }

@@ -5,6 +5,7 @@ import { translations } from "../lib/i18n";
 import ThemeToggle from "./ThemeToggle";
 import PdfButton from "./PdfButton";
 import LanguageSwitch from "./LanguageSwitch";
+import WalletConnect from "./WalletConnect";
 
 export default function Sidebar() {
   const { language } = useLanguage();
@@ -60,15 +61,16 @@ export default function Sidebar() {
               className="p-2 rounded-full cursor-pointer transition-colors"
               style={{ 
                 color: 'var(--heading)',
-                background: 'transparent'
+                background: 'transparent',
+                border: '1px solid transparent'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'var(--card-bg)';
-                e.currentTarget.style.border = '1px solid var(--card-border)';
+                e.currentTarget.style.borderColor = 'var(--card-border)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.border = 'none';
+                e.currentTarget.style.borderColor = 'transparent';
               }}
               aria-label={t.sidebar.close}
             >
@@ -103,6 +105,14 @@ export default function Sidebar() {
                 {t.sidebar.export}
               </h3>
               <PdfButton />
+            </div>
+
+            {/* 钱包连接 */}
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-medium" style={{ color: 'var(--heading)' }}>
+                {t.sidebar.wallet}
+              </h3>
+              <WalletConnect />
             </div>
           </div>
         </div>
