@@ -37,12 +37,12 @@ export type ResumeData = {
     devops: string[];
   };
   projects: ProjectItem[];
-  education: { period: string; school: string; major?: string }[];
+  education: { period: string; school: string; major?: string; degree?: string }[];
 };
 
 export const resumeData: ResumeData = {
   name: "余翼",
-  title: "全栈工程师（ Next.js / Node / DApp / Electron ）",
+  title: "DApp全栈工程师（Next.js/Node/DApp/Electron）",
   contacts: {
     phone: "+86 13143745768",
     emails: ["yuyi.gz@gmail.com", "yuyi.gz@163.com",],
@@ -192,13 +192,7 @@ export const resumeData: ResumeData = {
       links: [ { label: "GitHub", url: "https://github.com/yy9331/pyro-wing-wallet" } ]
     },
     {
-      title: "国泰航空 Cathay Agent",
-      period: "2024.06 – 2025.06",
-      summary: "面向商用客户的保证金订票查询与管理；多前端栈并行交付。",
-      stack: ["React", "Angular", "Java 微服务", "MongoDB", "AEM"]
-    },
-    {
-      title: "汇丰银行 MSS-FICC-MKTY 桌面应用",
+      title: "汇丰银行 MSS-MKTY Electron 桌面应用",
       period: "2022.06 – 2024.02",
       summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
       stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"]
@@ -227,6 +221,6 @@ export const resumeData: ResumeData = {
     }
   ],
   education: [
-    { period: "2003.09 – 2007.07", school: "广东外语外贸大学", major: "工商管理" }
+    { period: "2003.09 – 2007.07", school: "广东外语外贸大学 (双一流)", major: "工商管理", degree: "统招本科" }
   ]
 };

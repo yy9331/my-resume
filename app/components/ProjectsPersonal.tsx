@@ -17,7 +17,7 @@ export default function ProjectsPersonal({ items }: { items: Item[] }) {
     <div className="grid md:grid-cols-2 gap-4">
       {items.map((p) => (
         <div key={p.title} className="card p-4">
-          <div className="flex items-baseline justify-between">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
             <h3 className="text-base font-semibold">{p.title}</h3>
             {p.period && <span className="text-xs muted">{p.period}</span>}
           </div>

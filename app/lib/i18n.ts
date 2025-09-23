@@ -45,12 +45,12 @@ export interface ResumeDataI18n {
     details?: string[];
     stack?: string[];
   }[];
-  education: { period: string; school: string; major?: string }[];
+  education: { period: string; school: string; major?: string; degree?: string }[];
 }
 
 export const resumeDataEn: ResumeDataI18n = {
   name: "Yu Yi (Yves)",
-  title: "Full Stack Engineer (Next.js/Node/Electron/Angular)",
+  title: "DApp/Web3 Full Stack Engineer (Next.js/Node/Solidity/Electron)",
   contacts: {
     phone: "+86 13143745768",
     emails: ["yuyi.gz@gmail.com", "yuyi.gz@163.com",],
@@ -82,9 +82,8 @@ export const resumeDataEn: ResumeDataI18n = {
         "Integrate Solana Programs with the app frontend",
         "Develop lending SDK and API integrations for third‑party developers",
         "Protocol TVL surpassed $10M with rapid user growth",
-        "Achieved zero liquidation delay, becoming the fastest lending protocol in the Solana ecosystem",
         "SDK adopted and integrated by multiple DeFi projects",
-        "Built wallet flows with wagmi/viem, EIP‑712 typed‑data signing, permit and multicall patterns",
+        "Built wallet flows with @solana/web3.js, EIP‑712 typed‑data signing, permit patterns",
         "Hardhat based CI pipeline: unit/integration tests, mainnet forking, coverage and gas‑report",
         "Auth & data: Subgraph/The Graph for analytics, optimized RPC usage (batch, caching)",
         "Improved critical paths by ~25% through gas & network optimization"
@@ -197,8 +196,7 @@ export const resumeDataEn: ResumeDataI18n = {
       "Solidity", "Hardhat", "OpenZeppelin",
       "ethers.js", "viem", "wagmi", "WalletConnect",
       "EIP-712 Signatures", "Gas optimization",
-      "Multichain(EVM/Solana)", "RPC(Alchemy/Infura/QuickNode)",
-      "The Graph/Subgraph"
+      "Multichain(EVM/Solana)", "The Graph/Subgraph"
     ],
     crossPlatform: ["Electron", "React Native", "Mini Programs"],
     testing: ["BDD(Jest & Enzyme)", "e2e(Cypress)"],
@@ -274,7 +272,6 @@ export const resumeDataEn: ResumeDataI18n = {
         "- One‑click lending: smart prefill of optimal parameters to enhance UX",
         "- Integrations: @solana/wallet-adapter and TradingView charts",
         "Core Module Development:",
-        "- Real‑time liquidation monitor: WebSocket connections and state sync",
         "- Trade builder: orchestrate complex Solana Program calls",
         "- Business modules: JLP collateral, lending parameter optimization, risk management"
       ]
@@ -290,7 +287,7 @@ export const resumeDataEn: ResumeDataI18n = {
         "- Real‑time compute architecture: Markout analytics, TVL‑adjusted yield, impermanent loss tracking",
         "Innovative Architecture:",
         "- Modular Hook system: custom useBunniPool to compose complex business logic",
-        "- Smart caching: multi‑layer on‑chain data cache + Web Worker for compute‑intensive tasks",
+        "- Smart caching: Web Worker for compute‑intensive tasks",
         "- Risk evaluation system: real‑time liquidity risk computation with intelligent parameter suggestions"
       ]
     },
@@ -339,13 +336,13 @@ export const resumeDataEn: ResumeDataI18n = {
     }
   ],
   education: [
-    { period: "2003.09 – 2007.07", school: "Guangdong University of Foreign Studies", major: "Business Administration" }
+    { period: "2003.09 – 2007.07", school: "Guangdong University of Foreign Studies", major: "Business Administration", degree: "Bachelor degree" }
   ]
 };
 
 export const resumeDataZh: ResumeDataI18n = {
   name: "余翼",
-  title: "全栈工程师（ Next.js / Node / DApp / Electron ）",
+  title: "DApp全栈工程师（Next.js/Node/DApp/Electron）",
   contacts: {
     phone: "+86 13143745768",
     emails: ["yuyi.gz@gmail.com", "yuyi.gz@163.com",],
@@ -377,9 +374,8 @@ export const resumeDataZh: ResumeDataI18n = {
         "参与 Solana Program 与前端的集成开发",
         "开发借贷 SDK 与 API 集成，服务第三方开发者",
         "协议 TVL 突破 1000 万美元，用户增长迅速",
-        "实现零清算延迟，成为 Solana 生态最快借贷协议",
         "借贷 SDK 被多个 DeFi 项目集成使用",
-        "接入 wagmi/viem 钱包与签名流程，EIP‑712 typed‑data、permit、multicall 等模式",
+        "接入 @solana/web3.js 钱包与签名流程，EIP‑712 typed‑data、permit 等模式",
         "基于 Hardhat 构建 CI：单测/集成测试、主网分叉、覆盖率与 gas report",
         "数据与分析：使用 The Graph/Subgraph；优化 RPC（批处理、缓存）",
         "通过 gas 与网络优化将关键链路耗时下降约 25%"
@@ -484,7 +480,7 @@ export const resumeDataZh: ResumeDataI18n = {
       "Solidity", "Hardhat", "OpenZeppelin",
       "ethers.js", "viem", "wagmi", "WalletConnect",
       "EIP-712 签名", "Gas 优化",
-      "多链(EVM/Solana)", "RPC(Alchemy/Infura/QuickNode)",
+      "多链(EVM/Solana)",
       "The Graph/Subgraph"
     ],
     crossPlatform: ["Electron", "React Native", "小程序"],
@@ -562,7 +558,6 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 一键借贷：智能预填充最优参数，提升用户体验",
         "- 集成 @solana/wallet-adapter 与 TradingView 图表库",
         "核心模块开发：",
-        "- 实时清算监控：处理 WebSocket 连接与状态同步",
         "- 交易构建器：处理复杂的 Solana Program 调用逻辑",
         "- 业务开发：JLP 代币抵押、借贷参数优化、风险管理"
       ]
@@ -578,7 +573,7 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 构建实时计算架构：Markout 分析、TVL 调整收益率、套利损失追踪",
         "创新架构设计：",
         "- 模块化 Hook 系统：自定义 useBunniPool 组合复杂业务逻辑",
-        "- 智能缓存策略：链上数据多层缓存 + Web Worker 处理计算密集任务",
+        "- 智能缓存策略：Web Worker 处理计算密集任务",
         "- 风险评估系统：实时计算流动性风险并提供智能参数推荐"
       ]
     },
@@ -592,13 +587,7 @@ export const resumeDataZh: ResumeDataI18n = {
       stack: ["Next.js", "Postgres", "Vercel", "Supabase Auth"]
     },
     {
-      title: "国泰航空 Cathay Agent",
-      period: "2024.06 – 2025.06",
-      summary: "面向商用客户的保证金订票查询与管理；多前端栈并行交付。",
-      stack: ["React", "Angular", "Java 微服务", "MongoDB", "AEM"]
-    },
-    {
-      title: "汇丰银行 MSS-FICC-MKTY 桌面应用",
+      title: "汇丰银行 MSS-MKTY Electron 桌面应用",
       period: "2022.06 – 2024.02",
       summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
       stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"]
@@ -627,7 +616,7 @@ export const resumeDataZh: ResumeDataI18n = {
     }
   ],
   education: [
-    { period: "2003.09 – 2007.07", school: "广东外语外贸大学", major: "工商管理" }
+    { period: "2003.09 – 2007.07", school: "广东外语外贸大学 (双一流)", major: "工商管理", degree: "统招本科" }
   ]
 };
 
