@@ -107,28 +107,8 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["DEX", "Uniswap v4"]
     },
     {
-      period: "2025 - Present",
-      company: "Multiple Contract/Wallet/Blockchain Projects",
-      role: "Full Stack Developer",
-      bullets: [
-        "Responsible for integrated delivery from smart contracts to frontend and backend, see Project Experience & Results for details"
-      ]
-    },
-    {
-      period: "2024.06 – 2025.06",
-      company: "Guangzhou Friendship Foreign Service Co., Ltd. · Cathay Pacific CXA Project Team",
-      role: "Frontend Developer",
-      bullets: [
-        "Rapid response and iteration, developed frontend common library",
-        "Combined AI for refactoring and optimizing existing component code",
-        "Independent communication and component refactoring; adapted to new interactions after UX changes",
-        "Quick switching between Angular/React stacks in microservice architecture"
-      ],
-      stack: ["React", "Angular", "Java Microservices", "MongoDB", "AEM"]
-    },
-    {
-      period: "2022.06 – 2024.02",
-      company: "Symbio (China) Co., Ltd. · HSBC MSS-FICC-MKTY Project Team",
+      period: "2021.07 – 2022.03",
+      company: "Symbio (China) Co., Ltd. · HSBC Investment Banking MSS-FICC-MKTY Project Team",
       role: "Full Stack Developer",
       bullets: [
         "Independent frontend and backend development to production; multiple solution comparisons and optimal solution communication",
@@ -140,36 +120,18 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java Microservices", "MongoDB"]
     },
     {
-      period: "2021.12 – 2022.06",
-      company: "Zebra Network Technology Co., Ltd. · Vehicle Industry Digitalization",
-      role: "Full Stack Developer",
-      bullets: [
-        "Overcame frontend animations and cross-platform integration (card flipping, canvas coloring)",
-        "Extracted common components and packaged as npm packages; micro-frontend qiankun practice",
-        "Agile iteration with high-standard interaction and visual implementation"
-      ],
-      stack: ["React", "Rax", "Umi", "qiankun", "MongoDB"]
-    },
-    {
-      period: "2021.07 – 2021.12",
-      company: "Yunxi Technology (Guangzhou) Co., Ltd. · Pharmaceutical Business Department",
-      role: "Frontend Team Lead",
-      bullets: [
-        "Established frontend architecture and code standards; common component packaging and optimization; technical sharing",
-        "Progress and resource control; new employee training; efficient coordination with clients/product/UI"
-      ]
-    },
-    {
       period: "2019.09 – 2021.07",
-      company: "Wistron Software (Wuhan) Co., Ltd. / Chinasoft International Co., Ltd. · HSBC GTRF-CMB",
+      company: "Chinasoft International Co., Ltd. · HSBC Commercial Banking GTRF-CMB Project Team",
       role: "Frontend Developer",
-      bullets: ["Responsible for module development and refactoring, automated testing and engineering collaboration"]
+      bullets: ["Responsible for module development and refactoring, automated testing and engineering collaboration"],
+      stack: ["React", "React Hooks", "Redux", "ECharts", "Webpack"]
     },
     {
       period: "2018.12 – 2019.09",
       company: "Isoftstone Information Technology (Group) Co., Ltd. · Huawei Hardware Testing Digitalization",
       role: "Frontend Developer",
-      bullets: ["Data visualization and report export modules, test result backfill and statistics modules"]
+      bullets: ["Data visualization and report export modules, test result backfill and statistics modules"],
+      stack: ["Vue", "Element UI", "Vuex"]
     },
     {
       period: "2017.08 – 2018.12",
@@ -307,24 +269,14 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["React", "Angular", "Java Microservices", "MongoDB", "AEM"]
     },
     {
-      title: "HSBC MSS-FICC-MKTY Desktop Application",
-      period: "2022.06 – 2024.02",
+      title: "HSBC MSS-FICC-MKTY Electron Desktop Application",
+      period: "2021.07 – 2022.03",
       summary: "Monitor foreign exchange/cash/bond trading capital flows; multi-data source aggregation and report generation.",
       stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"]
     },
     {
-      title: "Hongqi Auto In-Car Mini Program 2022 Annual Series Events",
-      summary: "High-intensity marketing campaign animations and interactions (card flipping, coloring, animations, etc.).",
-      stack: ["Umi", "canvas", "antd-mobile", "React Native", "Rax", "dva", "MongoDB"]
-    },
-    {
-      title: "Dashenlin Pharmaceutical Group Marketing Platform",
-      summary: "DM marketing/returns/profit sharing/marketing rules modules; engineering and drag-and-drop poster challenges.",
-      stack: ["React", "Mobx", "webpack", "ant design"]
-    },
-    {
       title: "HSBC WPB-CHANNELS-PAYMENT",
-      period: "2020.05 – 2021.07",
+      period: "2019.09 – 2021.07",
       summary: "Private banking large transaction capital flow display and system integration; frontend efficiency and quality improvement.",
       stack: ["React", "Hooks", "Webpack", "BDD Automated Testing"]
     },
@@ -399,20 +351,8 @@ export const resumeDataZh: ResumeDataI18n = {
       stack: ["DEX", "Uniswap v4"]
     },
     {
-      period: "2024.06 – 2025.06",
-      company: "广州市友谊对外服务有限公司 · 国泰航空 CXA 项目组",
-      role: "前端开发",
-      bullets: [
-        "快速响应并迭代，编写前端 common library",
-        "结合 AI 重构与优化现有组件代码",
-        "独立沟通并完成组件重构；适配更换 UX 后的新交互",
-        "微服务架构下能在 Angular/React 多栈间快速切换"
-      ],
-      stack: ["React", "Angular", "Java 微服务", "MongoDB", "AEM"]
-    },
-    {
-      period: "2022.06 – 2024.02",
-      company: "信必优（中国）有限公司 · 汇丰银行 MSS-FICC-MKTY 项目组",
+      period: "2021.07 – 2022.03",
+      company: "信必优（中国）有限公司 · 汇丰银行 投资银行 MSS-FICC-MKTY 项目组",
       role: "全栈开发",
       bullets: [
         "前后端独立开发至上线；多方案对比并沟通最优解",
@@ -424,36 +364,18 @@ export const resumeDataZh: ResumeDataI18n = {
       stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java 微服务", "MongoDB"]
     },
     {
-      period: "2021.12 – 2022.06",
-      company: "斑马网络技术有限公司 · 车机产业数字化",
-      role: "全栈开发",
-      bullets: [
-        "攻克前端动效与跨端接入（卡牌翻转、canvas 填色）",
-        "抽离公用组件并沉淀为 npm 包；微前端 qiankun 实践",
-        "敏捷迭代，高标准交互与视觉落地"
-      ],
-      stack: ["React", "Rax", "Umi", "qiankun", "MongoDB"]
-    },
-    {
-      period: "2021.07 – 2021.12",
-      company: "云徙科技（广州）有限公司 · 医药业务部",
-      role: "前端组长",
-      bullets: [
-        "制定前端架构与代码规范；通用组件封装与优化；技术分享",
-        "把控进度与资源；培训新人；高效对接业主/产品/UI"
-      ]
-    },
-    {
       period: "2019.09 – 2021.07",
-      company: "纬创软件（武汉）有限公司 / 中软国际有限公司 · 汇丰银行 GTRF-CMB",
+      company: "中软国际有限公司 · 汇丰银行 商业银行 GTRF-CMB 项目组",
       role: "前端开发",
-      bullets: ["负责模块开发与重构、自动化测试与工程化协作"]
+      bullets: ["负责模块开发与重构、自动化测试与工程化协作"],
+      stack: ["React", "React Hooks", "Redux", "ECharts", "Webpack"]
     },
     {
       period: "2018.12 – 2019.09",
       company: "软通动力信息技术（集团）有限公司 · 华为硬件测试数字化",
       role: "前端开发",
-      bullets: ["数据可视化与报告导出模块、用例结果回填与统计模块等"]
+      bullets: ["数据可视化与报告导出模块、用例结果回填与统计模块等"],
+      stack: ["Vue", "Element UI", "Vuex"]
     },
     {
       period: "2017.08 – 2018.12",
@@ -588,23 +510,13 @@ export const resumeDataZh: ResumeDataI18n = {
     },
     {
       title: "汇丰银行 MSS-MKTY Electron 桌面应用",
-      period: "2022.06 – 2024.02",
+      period: "2021.07 – 2022.03",
       summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
       stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"]
     },
     {
-      title: "红旗汽车车机小程序 2022 年度系列活动",
-      summary: "高强度营销活动的动效与互动实现（翻卡、填色、动图等）。",
-      stack: ["Umi", "canvas", "antd-mobile", "React Native", "Rax", "dva", "MongoDB"]
-    },
-    {
-      title: "大参林医药集团营销中台",
-      summary: "负责 DM 营销/退货/分润/营销规则等模块；工程化与拖拽海报等难点。",
-      stack: ["React", "Mobx", "webpack", "ant design"]
-    },
-    {
       title: "汇丰银行 WPB-CHANNELS-PAYMENT",
-      period: "2020.05 – 2021.07",
+      period: "2019.09 – 2021.07",
       summary: "对私银行大额业务资金流展示与系统对接；前端效率与质量提升。",
       stack: ["React", "Hooks", "Webpack", "BDD 自动化测试"]
     },

@@ -1,7 +1,9 @@
 import React from "react";
-import { ProjectItem } from "../lib/resume";
+import type { ResumeDataI18n } from "../lib/i18n";
 import Link from "next/link";
 import Chip from "./Chip";
+
+type ProjectItem = ResumeDataI18n["projects"][number];
 
 export default function Projects({ items }: { items: ProjectItem[] }) {
   return (

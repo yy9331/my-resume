@@ -1,6 +1,8 @@
 import React from "react";
-import { ExperienceItem } from "../lib/resume";
+import type { ResumeDataI18n } from "../lib/i18n";
 import Chip from "./Chip";
+
+type ExperienceItem = ResumeDataI18n["experiences"][number];
 
 export default function Experience({ items }: { items: ExperienceItem[] }) {
   return (
