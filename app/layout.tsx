@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import BackgroundAnim from "./components/BackgroundAnim";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { WalletProvider } from "./contexts/WalletContext";
 
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yu Yi (Yves), https://zyzy.info, Full Stack DApp Developer",
+  title: "Yu Yi (Yves), cv.zyzy.info, Full Stack DApp Developer",
   description: "余翼 · 全栈工程师（React/Next.js/Electron/Node）",
   icons: {
     icon: '/favicon.ico',
@@ -42,6 +43,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         data-theme="dark"
       >
+        <BackgroundAnim />
         <LanguageProvider>
           <WalletProvider>
             {children}

@@ -11,7 +11,7 @@ export default function Header() {
   const resumeData = language === 'en' ? resumeDataEn : resumeDataZh;
 
   return (
-    <header className="relative overflow-hidden card rounded-xl p-4 md:p-6">
+    <header className="relative overflow-hidden card rounded-xl p-4 md:p-6 z-1">
       <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full" style={{ background: 'rgba(251,191,36,.15)' }} />
       <div className="absolute -left-12 -bottom-12 h-64 w-64 rounded-full" style={{ background: 'rgba(234,88,12,.12)' }} />
       <div className="relative flex flex-col md:flex-row items-start gap-4 md:gap-6">

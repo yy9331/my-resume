@@ -50,7 +50,7 @@ export interface ResumeDataI18n {
 
 export const resumeDataEn: ResumeDataI18n = {
   name: "Yu Yi (Yves)",
-  title: "DApp/Web3 Full Stack Engineer (Next.js/Node/Solidity/Electron)",
+  title: "DApp/Web3 Full Stack Engineer (Next.js/Node/DApp/Electron)",
   contacts: {
     phone: "+86 13143745768",
     emails: ["yuyi.gz@gmail.com", "yuyi.gz@163.com",],
