@@ -55,6 +55,11 @@ export default function Header() {
             <Chip>Electron</Chip>
             <Chip>Node</Chip>
             <Chip>TypeScript</Chip>
+            <Chip>wagmi</Chip>
+            <Chip>viem</Chip>
+            <Chip>ethers.js</Chip>
+            <Chip>WalletConnect</Chip>
+            <Chip>EIP-712</Chip>
           </div>
         </div>
         {/* 桌面端：右侧竖版头像（不裁切） */}

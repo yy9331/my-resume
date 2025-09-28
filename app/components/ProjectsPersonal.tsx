@@ -14,7 +14,7 @@ type Item = {
 
 export default function ProjectsPersonal({ items }: { items: Item[] }) {
   return (
-    <div className="grid md:grid-cols-2 gap-4">
+    <div className="grid md:grid-cols-2 gap-4" data-print-grid="personal">
       {items.map((p) => (
         <div key={p.title} className="card p-4">
           <div className="flex flex-wrap items-baseline justify-between gap-2">

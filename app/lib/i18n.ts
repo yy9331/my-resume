@@ -61,11 +61,10 @@ export const resumeDataEn: ResumeDataI18n = {
     { label: "GitHub", url: "https://github.com/yy9331" }
   ],
   summary: [
-    "Focused on DApp/Web3 full‑stack delivery: Solidity/Hardhat + React/Next.js integration, wallet & EIP‑712 signing, on‑chain/off‑chain data flow and performance/security optimization.",
+    "Full‑stack Web3 delivery: Electron desktop + Solidity/Hardhat with React/Next.js; wagmi/viem/ethers, WalletConnect & EIP‑712; The Graph/Subgraph; Node/Next.js backend; on‑chain/off‑chain data flow and performance/security optimization.",
     "Remote‑ready: solid async communication, documentation and overlap with APAC/EU time zones.",
     "8+ years of full-stack development experience, deep expertise in React ecosystem, with experience in designing and publishing public npm packages.",
-    "Served Fortune 500 companies, capable of English meetings, communication, presentations, and written correspondence.",
-    "Proficient in Electron desktop development, Node/Next.js backend; practical experience with Java and Scala stream programming.",
+    "Served Fortune 500 companies, capable of English meetings, communication, presentations, and written correspondence."
   ],
   strengths: [
     "Rapid response and refactoring capabilities: Can combine AI suggestions for frontend component refactoring and optimization",
@@ -87,7 +86,8 @@ export const resumeDataEn: ResumeDataI18n = {
         "Hardhat based CI pipeline: unit/integration tests, mainnet forking, coverage and gas‑report",
         "Auth & data: Subgraph/The Graph for analytics, optimized RPC usage (batch, caching)",
         "Improved critical paths by ~25% through gas & network optimization"
-      ]
+      ],
+      stack: ["DeFi Lending", "Solana", "@solana/web3.js", "Wallet Adapter", "React", "Next.js", "TypeScript"]
     },
     {
       period: "2022.03 – 2024.05",
@@ -104,7 +104,7 @@ export const resumeDataEn: ResumeDataI18n = {
         "Set up feature flags/remote config for safe, incremental rollouts in production",
         "Async remote collaboration across time zones; PRD → design → implementation → docs handover"
       ],
-      stack: ["DEX", "Uniswap v4"]
+      stack: ["Uniswap v4 Hooks", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
     },
     {
       period: "2021.07 – 2022.03",
@@ -117,13 +117,19 @@ export const resumeDataEn: ResumeDataI18n = {
         "Quickly mastered Electron, Scala, SQL and implemented",
         "Scala for app data request layer; SQL task optimization; Oracle and MongoDB integration"
       ],
-      stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java Microservices", "MongoDB"]
+      stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java Microservices", "MongoDB", "E2E Automated Testing(Cypress)"]
     },
     {
       period: "2019.09 – 2021.07",
-      company: "Chinasoft International Co., Ltd. · HSBC Commercial Banking GTRF-CMB Project Team",
+      company: "Chinasoft International Co., Ltd. · HSBC Private Banking PAYMENT Project Team",
       role: "Frontend Developer",
-      bullets: ["Responsible for module development and refactoring, automated testing and engineering collaboration"],
+      bullets: [
+        "Refactored legacy modules and improved code quality via modular design",
+        "Packaged reusable components: search/filter, date‑range picker, loading/steps widgets",
+        "Introduced BDD to key flows and kept unit tests green in CI",
+        "Optimized critical UI paths (search/rendering), noticeably faster and smoother",
+        "Collaborated with backend for interfaces and integration; supported engineering rollout"
+      ],
       stack: ["React", "React Hooks", "Redux", "ECharts", "Webpack"]
     },
     {
@@ -153,7 +159,7 @@ export const resumeDataEn: ResumeDataI18n = {
     }
   ],
   skills: {
-    frontend: ["TypeScript", "ES6+", "React + Hooks", "Next.js", "Vue", "Angular"],
+    frontend: ["TypeScript", "ES6+", "React + Hooks", "tailwindCSS", "Next.js", "Vue", "Angular"],
     dapp: [
       "Solidity", "Hardhat", "OpenZeppelin",
       "ethers.js", "viem", "wagmi", "WalletConnect",
@@ -165,9 +171,9 @@ export const resumeDataEn: ResumeDataI18n = {
     dataApi: ["React Query", "GraphQL"],
     build: ["Webpack", "npm", "Vite", "Rollup"],
     designNpm: ["Component Design", "Npm Package Design & Debugging"],
-    backend: ["Scala", "Java", "Python", "SQL"],
+    backend: ["Scala", "Java", "Python"],
     frameworks: ["Next.js", "Spring Boot", "Django"],
-    db: ["Supabase", "Postgres", "Oracle", "MongoDB"],
+    db: ["SQL", "Supabase", "Postgres", "Oracle", "MongoDB"],
     devops: ["Vercel", "Jenkins", "Docker", "Nginx"]
   },
   personalProjects: [
@@ -220,6 +226,15 @@ export const resumeDataEn: ResumeDataI18n = {
         "- Wallet: mnemonic/private key import, asset listing, transfer/mint, custom tokens",
         "- Hooks: balance queries and subscriptions, Gas/Nonce handling, error fallbacks"
       ]
+    },
+    {
+      title: "Personal Tech Blog (with Login Auth, Comments & MCP Service)",
+      summary: "Record daily tech insights; self-developed MCP service integrated with AI; supports Markdown editing and comments.",
+      links: [
+        { label: "Website", url: "https://zyzy.info" },
+        { label: "MCP Service Repo", url: "https://github.com/yy9331/blog-mcp-server" }
+      ],
+      stack: ["Next.js", "Postgres", "Vercel", "Supabase Auth"]
     }
   ],
   projects: [
@@ -254,31 +269,31 @@ export const resumeDataEn: ResumeDataI18n = {
       ]
     },
     {
-      title: "Personal Tech Blog (with Login Auth, Comments & MCP Service)",
-      summary: "Record daily tech insights; self-developed MCP service integrated with AI; supports Markdown editing and comments.",
-      links: [
-        { label: "Website", url: "https://zyzy.info" },
-        { label: "MCP Service Repo", url: "https://github.com/yy9331/blog-mcp-server" }
-      ],
-      stack: ["Next.js", "Postgres", "Vercel", "Supabase Auth"]
-    },
-    {
-      title: "Cathay Pacific Cathay Agent",
-      period: "2024.06 – 2025.06",
-      summary: "Margin booking query and management for commercial clients; parallel delivery across multiple frontend stacks.",
-      stack: ["React", "Angular", "Java Microservices", "MongoDB", "AEM"]
-    },
-    {
       title: "HSBC MSS-FICC-MKTY Electron Desktop Application",
       period: "2021.07 – 2022.03",
       summary: "Monitor foreign exchange/cash/bond trading capital flows; multi-data source aggregation and report generation.",
-      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"]
+      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"],
+      details: [
+        "Highlights:",
+        "- Owned full‑stack delivery for several modules in the Electron app (frontend → production)",
+        "- Abstracted reusable utilities/components; improved team delivery efficiency by ~50%",
+        "- Published lightweight npm helpers for API requests to simplify integration",
+        "- Built a Scala‑based request layer; quickly learned Scala and adapted APIs",
+        "- Storage split: Oracle for trades, MongoDB for behavior; tuned SQL/NoSQL queries"
+      ]
     },
     {
-      title: "HSBC WPB-CHANNELS-PAYMENT",
-      period: "2019.09 – 2021.07",
-      summary: "Private banking large transaction capital flow display and system integration; frontend efficiency and quality improvement.",
-      stack: ["React", "Hooks", "Webpack", "BDD Automated Testing"]
+      title: "HSBC WPB-CHANNELS-PAYMENT Web Application",
+      summary: "Internal web application for private banking; large-amount capital flow display and integrations.",
+      stack: ["React", "React Hooks", "Webpack", "BDD Automated Testing (Jest & Enzyme)"],
+      details: [
+        "Highlights:",
+        "- Refactored a large legacy module and integrated with internal systems & SWIFT",
+        "- Delivered shared components: search, table/filters, date‑range picker, loading, steps",
+        "- Introduced BDD (Jest & Enzyme); pipelines stayed green, stability improved",
+        "- Optimized search path; runtime roughly doubled (~100%) with better UX",
+        "- Received positive feedback and a quarterly award for reliability and speed"
+      ]
     },
     {
       title: "Huawei HDP-TSP Hardware Testing System",
@@ -305,11 +320,10 @@ export const resumeDataZh: ResumeDataI18n = {
     { label: "GitHub", url: "https://github.com/yy9331" }
   ],
   summary: [
-    "专注 DApp/Web3 全栈交付：Solidity/Hardhat 与 React/Next.js 集成，钱包接入与 EIP‑712 签名，链上/链下数据流与性能及安全优化。",
+    "Web3 全栈交付：Electron 桌面端 + Solidity/Hardhat 与 React/Next.js；wagmi/viem/ethers、WalletConnect 与 EIP‑712、The Graph/Subgraph；Node/Next.js 后端；覆盖链上/链下数据流与性能/安全优化。",
     "适配远程：善于异步沟通与文档沉淀，可与亚太/欧洲时区重叠工作",
     "全栈开发8年+经验，深入 React 生态，具备公共 npm package 设计与发布经验。",
-    "服务过世界500强，能英文会议、交流、present与书面往来。",
-    "熟悉 Electron 桌面端、Node/Next.js 后端；对 Java、Scala 流式编程有实践。",
+    "服务过世界500强，能英文会议、交流、present与书面往来。"
   ],
   strengths: [
     "快速响应与重构能力：能结合 AI 建议进行前端组件重构与优化",
@@ -331,7 +345,8 @@ export const resumeDataZh: ResumeDataI18n = {
         "基于 Hardhat 构建 CI：单测/集成测试、主网分叉、覆盖率与 gas report",
         "数据与分析：使用 The Graph/Subgraph；优化 RPC（批处理、缓存）",
         "通过 gas 与网络优化将关键链路耗时下降约 25%"
-      ]
+      ],
+      stack: ["DeFi 借贷", "Solana", "@solana/web3.js", "Wallet Adapter", "React", "Next.js", "TypeScript"]
     },
     {
       period: "2022.03 – 2024.05",
@@ -348,7 +363,7 @@ export const resumeDataZh: ResumeDataI18n = {
         "建立功能开关与灰度策略，确保生产环境稳健迭代",
         "远程协作：跨时区异步推进 PRD/设计/实现/文档交接"
       ],
-      stack: ["DEX", "Uniswap v4"]
+      stack: ["Uniswap v4 Hook", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
     },
     {
       period: "2021.07 – 2022.03",
@@ -361,14 +376,20 @@ export const resumeDataZh: ResumeDataI18n = {
         "快速上手 Electron、Scala、SQL 并落地",
         "Scala 编写 App 数据请求层；调优 SQL 任务；Oracle 与 MongoDB 并用"
       ],
-      stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java 微服务", "MongoDB"]
+      stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java 微服务", "MongoDB", "E2E Automated Testing(Cypress)"]
     },
     {
       period: "2019.09 – 2021.07",
-      company: "中软国际有限公司 · 汇丰银行 商业银行 GTRF-CMB 项目组",
+      company: "中软国际有限公司 · 汇丰银行 私人银行 PAYMENT 项目组",
       role: "前端开发",
-      bullets: ["负责模块开发与重构、自动化测试与工程化协作"],
-      stack: ["React", "React Hooks", "Redux", "ECharts", "Webpack"]
+      bullets: [
+        "对旧模块进行重构与模块化改造，提升代码质量",
+        "封装通用组件：搜索/筛选、日期范围、loading/steps 等",
+        "在关键流程引入 BDD，CI 持续保持单测通过",
+        "优化搜索与渲染等关键路径，界面响应更快更流畅",
+        "配合后端接口联调，支持工程化上线与迭代"
+      ],
+      stack: ["React", "React Hooks", "Redux", "ECharts", "Webpack", "BDD Automated Testing(Jest & Enzyme)"]
     },
     {
       period: "2018.12 – 2019.09",
@@ -397,7 +418,7 @@ export const resumeDataZh: ResumeDataI18n = {
     }
   ],
   skills: {
-    frontend: ["TypeScript", "ES6+", "React + Hooks", "Next.js", "Vue", "Angular"],
+    frontend: ["TypeScript", "ES6+", "React + Hooks", "tailwindCSS", "Next.js", "Vue", "Angular"],
     dapp: [
       "Solidity", "Hardhat", "OpenZeppelin",
       "ethers.js", "viem", "wagmi", "WalletConnect",
@@ -410,9 +431,9 @@ export const resumeDataZh: ResumeDataI18n = {
     dataApi: ["React Query", "GraphQL"],
     build: ["Webpack", "npm", "Vite", "Rollup"],
     designNpm: ["组件设计", "Npm package 设计与调试"],
-    backend: ["Scala", "Java", "Python", "SQL"],
+    backend: ["Scala", "Java", "Python"],
     frameworks: ["Next.js", "Spring Boot", "Django"],
-    db: ["Supabase", "Postgres", "Oracle", "MongoDB"],
+    db: ["SQL", "Supabase", "Postgres", "Oracle", "MongoDB"],
     devops: ["Vercel", "Jenkins", "Docker", "Nginx"]
   },
   personalProjects: [
@@ -466,6 +487,15 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 钱包：助记词/私钥导入、资产列表、转账/铸造、自定义 Token",
         "- Hooks：余额查询订阅、Gas/Nonce 处理、错误兜底"
       ]
+    },
+    {
+      title: "个人技术博客（含登录鉴权与评论、MCP 服务）",
+      summary: "记录技术日常；自研 MCP 服务集成 AI；支持 Markdown 编辑与评论。",
+      links: [
+        { label: "站点", url: "https://zyzy.info" },
+        { label: "MCP 服务仓库", url: "https://github.com/yy9331/blog-mcp-server" }
+      ],
+      stack: ["Next.js", "Postgres", "Vercel", "Supabase Auth"]
     }
   ],
   projects: [
@@ -499,26 +529,33 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 风险评估系统：实时计算流动性风险并提供智能参数推荐"
       ]
     },
-    {
-      title: "个人技术博客（含登录鉴权与评论、MCP 服务）",
-      summary: "记录技术日常；自研 MCP 服务集成 AI；支持 Markdown 编辑与评论。",
-      links: [
-        { label: "站点", url: "https://zyzy.info" },
-        { label: "MCP 服务仓库", url: "https://github.com/yy9331/blog-mcp-server" }
-      ],
-      stack: ["Next.js", "Postgres", "Vercel", "Supabase Auth"]
-    },
+    
     {
       title: "汇丰银行 MSS-MKTY Electron 桌面应用",
       period: "2021.07 – 2022.03",
       summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
-      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"]
+      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB", "E2E Automated Testing(Cypress)"],
+      details: [
+        "亮点：",
+        "- 负责 Electron 应用内多个模块的端到端交付（前端开发直至上线）",
+        "- 抽象通用工具/组件，团队交付效率提升约 50%",
+        "- 发布轻量 npm 工具用于接口请求，降低集成成本",
+        "- 搭建 Scala 请求层，快速学习并按需调整接口",
+        "- 存储分层：交易数据 Oracle、行为数据 MongoDB；按需优化 SQL/NoSQL 查询"
+      ]
     },
     {
-      title: "汇丰银行 WPB-CHANNELS-PAYMENT",
-      period: "2019.09 – 2021.07",
-      summary: "对私银行大额业务资金流展示与系统对接；前端效率与质量提升。",
-      stack: ["React", "Hooks", "Webpack", "BDD 自动化测试"]
+      title: "汇丰银行 WPB-CHANNELS-PAYMENT Web 应用",
+      summary: "对私银行内部 Web 应用：大额资金流展示与各系统对接。",
+      stack: ["React", "React Hooks", "Webpack", "BDD 自动化测试 (Jest & Enzyme)"],
+      details: [
+        "亮点：",
+        "- 重构大型遗留模块，对接内部系统与 SWIFT",
+        "- 沉淀通用组件：搜索、表格/筛选、日期范围、loading、steps 等",
+        "- 引入 BDD（Jest & Enzyme），流水线稳定通过",
+        "- 优化搜索链路，运行效率约提升 100%，体验显著改善",
+        "- 获得同组用户正面反馈及季度奖项"
+      ]
     },
     {
       title: "华为 HDP-TSP 硬件测试系统",

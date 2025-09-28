@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yu Yi (Yves), Full Stack DApp Developer +8613143745768",
+  title: "Yu Yi (Yves), https://zyzy.info, Full Stack DApp Developer",
   description: "余翼 · 全栈工程师（React/Next.js/Electron/Node）",
   icons: {
     icon: '/favicon.ico',

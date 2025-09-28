@@ -69,7 +69,7 @@ export default function Skills({ data }: { data: SkillGroups }) {
     { label: skillLabels[language].devops, key: "devops" }
   ];
   return (
-    <div className="columns-1 md:columns-3 gap-4 [column-fill:_balance]">
+    <div className="columns-1 md:columns-3 gap-4 [column-fill:_balance]" data-print-slim="skills">
       {groups.map((g) => (
         <div
           key={`group-${g.key}`}

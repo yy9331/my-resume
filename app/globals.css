@@ -60,6 +60,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 仅打印可见的元素默认隐藏 */
+.print-only { display: none; }
+
 /* 火焰橙黄主色系增强 */
 .text-flame { color: #f59e0b; }
 .bg-flame { background-color: #f59e0b; }
@@ -67,8 +70,8 @@ body {
 
 /* 打印为 A4，隐藏导出按钮容器和侧边栏 */
 @media print {
-  @page { size: A4 portrait; margin: 12mm; }
   .no-print { display: none !important; }
+  .print-only { display: block !important; }
   body { background: #ffffff; color: #111111; }
   
   /* 确保侧边栏和遮罩在打印时完全隐藏 */
@@ -165,13 +168,95 @@ ul li:hover::before {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* 打印时简化列表样式 */
+/* 打印时：Skills区块更紧凑，Chip 更小且卡片浅边框，整体与网页布局一致但更省空间 */
 @media print {
-  ul.list-disc li::before,
-  ul:not(.space-y-5) li::before {
-    width: 4px;
-    height: 4px;
-    box-shadow: none;
-    border: none;
+  /* Skills父容器标记 */
+  /* 强制使用 3 列网格，避免多栏在打印里行为不一致 */
+  [data-print-slim="skills"] { 
+    column-count: 1 !important; 
+    column-gap: 0 !important;
+    display: grid !important; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important; 
+    gap: 8px !important; 
   }
+  [data-print-slim="skills"] .card { padding: .5rem !important; margin-bottom: 0 !important; }
+  [data-print-slim="skills"] h4 { font-size: 12px !important; }
+  [data-print-slim="skills"] .flex.flex-wrap { gap: 2px 4px !important; }
+  [data-print-slim="skills"] .rounded-full { padding: 1px 6px !important; font-size: 10px !important; margin-right: 4px !important; margin-bottom: 4px !important; }
+  [data-print-slim="skills"] .card { break-inside: avoid !important; page-break-inside: avoid !important; }
+}
+
+/* 打印时：头部 Chip 与标题块的间距优化，避免空行与分页断开 */
+@media print {
+  /* 恢复头像，仅压缩周围间距，避免大片空白 */
+  header .md\:hidden { display: none !important; } /* 隐藏移动端浮动头像 */
+  header .hidden.md\:block { display: block !important; margin-top: 0 !important; }
+  header .md\:flex-row { flex-direction: row !important; }
+  header .flex-1 { flex: 1 1 auto !important; }
+  header .aspect-\[3\/4\] { margin: 0 !important; }
+
+  header .mt-4 { margin-top: .25rem !important; }
+  header .mt-3 { margin-top: .25rem !important; }
+  header .flex.flex-wrap { gap: 2px 6px !important; }
+  /* 回退 Chip 的压缩，避免影响头像布局 */
+  header .rounded-full { padding: 2px 8px !important; font-size: 12px !important; line-height: 1.2 !important; }
+  /* 避免标题与Chip分在两页 */
+  header, header > * { break-inside: avoid !important; page-break-inside: avoid !important; }
+}
+
+/* 打印时：避免 section 标题成孤行；保证标题与首段或列表在同页 */
+@media print {
+  #resume-root h2 { break-after: avoid !important; page-break-after: avoid !important; }
+  /* 标题不独占一页，但允许后续内容在页面底部开始并跨页 */
+  #resume-root h2 + div { break-before: auto !important; page-break-before: auto !important; break-inside: auto !important; page-break-inside: auto !important; }
+
+  /* Personal DApps 打印两列与分页优化，尽量填满页面 */
+  [data-print-grid="personal"] { display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 10px !important; }
+  /* 允许个人项目卡片在页底被切割，以减少大片空白 */
+  [data-print-grid="personal"] > .card { break-inside: auto !important; page-break-inside: auto !important; }
+  [data-print-grid="personal"] h3 { break-after: avoid !important; page-break-after: avoid !important; }
+  [data-print-grid="personal"] h3 + p { break-before: avoid !important; page-break-before: avoid !important; }
+
+  /* 工作经历卡片允许被切割，避免整块移至下一页造成空白 */
+  ul.space-y-5 > li.card { break-inside: auto !important; page-break-inside: auto !important; }
+
+  /* 确保头像在打印中可见 */
+  header img { display: block !important; visibility: visible !important; opacity: 1 !important; }
+}
+
+/* 打印时：所有列表圆点统一黑色，并禁用自定义彩色圆点与渐变 */
+@media print {
+  /* 若使用 ::marker（少量场景） */
+  :where(li)::marker { color: #000000 !important; }
+  /* 项目中自定义的彩色圆点全部取消，改回标准圆点 */
+  ul.list-disc li,
+  ul:not(.space-y-5) li { list-style: disc !important; }
+  ul.list-disc li::before,
+  ul:not(.space-y-5) li::before { content: none !important; }
+}
+
+/* 打印时：渐变裁剪文字改为纯色，避免姓名在未勾选“背景图形”时消失 */
+@media print {
+  .bg-clip-text.text-transparent {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: #111111 !important;
+    color: #111111 !important;
+  }
+}
+
+/* 打印时：将链接以 “Label: @URL” 形式展示，仅作用于 http/https 外链 */
+@media print {
+  a[href^="http"]::after,
+  a[href^="https"]::after {
+    content: ": " attr(href);
+    color: #666 !important;
+    font-size: 11px;
+    margin-left: 2px;
+    word-break: break-all;
+  }
+  /* 排除邮箱与相对路径 */
+  a[href^="mailto:"]::after,
+  a[href^="/"]::after { content: none; }
 }
