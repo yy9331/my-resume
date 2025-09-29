@@ -25,6 +25,7 @@ export default function Header() {
               sizes="(max-width: 767px) 96px"
               className="rounded-xl border-2 border-amber-400/20 shadow-lg object-contain"
               priority
+              quality={40}
             />
           </div>
           <h1 className="text-2xl md:text-4xl font-bold tracking-wide">
@@ -72,6 +73,7 @@ export default function Header() {
               sizes="(min-width: 768px) 160px, 120px"
               className="rounded-xl border-2 border-amber-400/20 shadow-lg object-contain"
               priority
+              quality={40}
             />
           </div>
         </div>

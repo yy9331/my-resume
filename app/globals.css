@@ -96,6 +96,15 @@ body {
 /* 打印时禁用背景动画 */
 @media print {
   .bg-anim { display: none !important; }
+  /* 去除装饰性色块与阴影，降低输出体积与墨量 */
+  header .absolute { display: none !important; }
+  .card, .card * { box-shadow: none !important; }
+  /* 强制系统字体以减少字形嵌入 */
+  * { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important; }
+  /* 降低颜色复杂度，避免大面积渐变 */
+  .bg-gradient-to-r, .text-transparent { background: none !important; -webkit-text-fill-color: #111 !important; color: #111 !important; }
+  /* 限制头像最大宽度，避免过大位图进入 PDF */
+  header .aspect-\[3\/4\] { width: 120px !important; }
 }
 
 /* 仅打印可见的元素默认隐藏 */
@@ -258,8 +267,8 @@ ul li:hover::before {
   /* 工作经历卡片允许被切割，避免整块移至下一页造成空白 */
   ul.space-y-5 > li.card { break-inside: auto !important; page-break-inside: auto !important; }
 
-  /* 确保头像在打印中可见 */
-  header img { display: block !important; visibility: visible !important; opacity: 1 !important; }
+  /* 打印时显示头像，但取消阴影以减小体积 */
+  header img { display: block !important; box-shadow: none !important; }
 }
 
 /* 打印时：所有列表圆点统一黑色，并禁用自定义彩色圆点与渐变 */
