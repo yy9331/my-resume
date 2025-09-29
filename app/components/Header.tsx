@@ -5,6 +5,10 @@ import Image from "next/image";
 import { useLanguage } from "../contexts/LanguageContext";
 import { resumeDataEn, resumeDataZh } from "../lib/i18n";
 import Chip from "./Chip";
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import { FaTelegramPlane, FaDiscord, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 export default function Header() {
   const { language } = useLanguage();
@@ -34,17 +38,21 @@ export default function Header() {
             </span>
             <span className="ml-0 md:ml-3 block md:inline text-sm md:text-base muted">{resumeData.title}</span>
           </h1>
-          <div className="mt-2 text-sm muted flex flex-wrap gap-x-4 gap-y-1">
-            <span>📱 {resumeData.contacts.phone}</span>
+          <div className="mt-2 text-sm muted flex flex-wrap gap-x-4 gap-y-1 items-center">
+            <span className="flex items-center gap-1"><FiPhone /> {resumeData.contacts.phone}</span>
             {resumeData.contacts.emails.map((e) => (
-              <span key={e}>✉️ {e}</span>
+              <Link key={e} href={`mailto:${e}`} className="custom-link flex items-center gap-1"><FiMail /> {e}</Link>
             ))}
-            <span>📍 {resumeData.contacts.location}</span>
+            <span className="flex items-center gap-1"><FiMapPin /> {resumeData.contacts.location}</span>
+            <Link href="https://t.me/yy9331" target="_blank" className="custom-link flex items-center gap-1"><FaTelegramPlane />@yy9331</Link>
+            <Link href="https://x.com/yy9331" target="_blank" className="custom-link flex items-center gap-1"><FaXTwitter />@yy9331</Link>
+            <Link href="https://discord.com/users/yy9331_03247" target="_blank" className="custom-link flex items-center gap-1"><FaDiscord />@yy9331_03247</Link>
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center gap-2">
+          <div className="mt-3 flex flex-wrap items-center gap-3">
             {resumeData.links.map((l) => (
-              <Link key={l.url} href={l.url} target="_blank" className="custom-link">
+              <Link key={l.url} href={l.url} target="_blank" className="custom-link flex items-center gap-1">
+                {l.label === 'GitHub' ? <FaGithub /> : null}
                 {l.label}
               </Link>
             ))}
