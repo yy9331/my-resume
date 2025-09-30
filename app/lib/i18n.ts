@@ -591,6 +591,7 @@ export const translations = {
       language: "Language",
       export: "Export",
       wallet: "Wallet",
+      guestbook: "Guestbook",
       close: "Close Settings"
     }
   },
@@ -615,6 +616,7 @@ export const translations = {
       language: "语言",
       export: "导出",
       wallet: "钱包",
+      guestbook: "留言板",
       close: "关闭设置"
     }
   }

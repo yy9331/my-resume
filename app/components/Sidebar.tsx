@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lib/i18n";
 import ThemeToggle from "./ThemeToggle";
@@ -8,6 +9,7 @@ import LanguageSwitch from "./LanguageSwitch";
 import WalletConnect from "./WalletConnect";
 
 export default function Sidebar() {
+  const router = useRouter();
   const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const t = translations[language];
@@ -113,6 +115,24 @@ export default function Sidebar() {
                 {t.sidebar.wallet}
               </h3>
               <WalletConnect />
+            </div>
+
+            {/* 留言板 */}
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-medium" style={{ color: 'var(--heading)' }}>
+                {t.sidebar.guestbook}
+              </h3>
+              <button
+                onClick={() => router.push('/guestbook')}
+                className="px-3 py-1.5 text-sm rounded-md cursor-pointer"
+                style={{
+                  color: 'var(--heading)',
+                  background: 'var(--card-bg)',
+                  border: '1px solid var(--card-border)'
+                }}
+              >
+                {language === 'en' ? 'Open' : '打开'}
+              </button>
             </div>
           </div>
         </div>
