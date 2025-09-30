@@ -56,6 +56,17 @@ export const db = {
     const query = 'DELETE FROM guestbook_messages WHERE id = $1 RETURNING id';
     const result = await pool.query(query, [messageId]);
     return result.rowCount !== null && result.rowCount > 0;
+  },
+
+  async updateMessage(messageId: string, newContent: string): Promise<GuestbookMessage | null> {
+    const query = `
+      UPDATE guestbook_messages
+      SET message = $2
+      WHERE id = $1
+      RETURNING *
+    `;
+    const result = await pool.query(query, [messageId, newContent]);
+    return result.rows[0] || null;
   }
 };
 

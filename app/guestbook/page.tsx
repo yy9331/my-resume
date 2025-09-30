@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { FaTrash } from "react-icons/fa";
+import { useSession, signIn } from "next-auth/react";
+import { FaTrash, FaEdit, FaTimes, FaCheck } from "react-icons/fa";
 import { GuestbookMessage } from "../lib/db";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useWallet } from "../contexts/WalletContext";
@@ -12,16 +13,19 @@ export default function GuestbookPage() {
   const router = useRouter();
   const { language } = useLanguage();
   const { walletInfo, connectWallet } = useWallet();
+  const { data: session } = useSession();
   
   const [messages, setMessages] = useState<GuestbookMessage[]>([]);
   const [loading, setLoading] = useState(true);
   const [newMessage, setNewMessage] = useState("");
   const [authorName, setAuthorName] = useState("");
   const [authMethod, setAuthMethod] = useState<"wallet" | "github" | null>(null);
-  const [githubUser, setGithubUser] = useState<string | null>(null);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editingContent, setEditingContent] = useState<string>("");
 
   const account = walletInfo?.address;
-  const isOwner = account?.toLowerCase() === OWNER_ADDRESS.toLowerCase();
+  const githubUser = session?.user?.username;
+  const isOwner = (account?.toLowerCase() === OWNER_ADDRESS.toLowerCase()) || (githubUser?.toLowerCase() === 'yy9331');
 
   const t = language === "en" ? {
     title: "Guestbook",
@@ -92,7 +96,11 @@ export default function GuestbookPage() {
     }
 
     try {
-      const response = await fetch(`/api/guestbook?id=${messageId}&address=${account}`, {
+      const params = new URLSearchParams();
+      if (account) params.set('address', account);
+      if (githubUser) params.set('github', githubUser);
+      params.set('id', messageId);
+      const response = await fetch(`/api/guestbook?${params.toString()}`, {
         method: 'DELETE',
       });
 
@@ -115,14 +123,18 @@ export default function GuestbookPage() {
     setAuthMethod("wallet");
   };
 
-  const handleGithubAuth = () => {
-    // Simplified GitHub auth - in production use OAuth
-    const username = prompt(language === "en" ? "Enter your GitHub username:" : "输入您的 GitHub 用户名:");
-    if (username) {
-      setGithubUser(username);
+  const handleGithubAuth = async () => {
+    // Real GitHub OAuth login
+    await signIn("github", { callbackUrl: "/guestbook" });
+  };
+
+  // If session becomes ready and has username, prefill and lock name
+  useEffect(() => {
+    if (session?.user?.username && !authorName) {
+      setAuthorName(session.user.username);
       setAuthMethod("github");
     }
-  };
+  }, [session, authorName]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -146,7 +158,10 @@ export default function GuestbookPage() {
       if (error) throw new Error(error);
 
       setNewMessage("");
-      setAuthorName("");
+      // Keep locked name for authenticated users
+      if (!account && !githubUser) {
+        setAuthorName("");
+      }
       loadMessages();
     } catch (error) {
       console.error("Failed to submit message:", error);
@@ -154,7 +169,18 @@ export default function GuestbookPage() {
     }
   };
 
-  const isAuthenticated = authMethod === "wallet" ? !!account : !!githubUser;
+  const isAuthenticated = !!account || !!githubUser;
+
+  // Auto-detect auth method
+  useEffect(() => {
+    if (account) {
+      setAuthMethod("wallet");
+      setAuthorName((prev) => prev || account);
+    } else if (githubUser) {
+      setAuthMethod("github");
+      setAuthorName((prev) => prev || githubUser);
+    }
+  }, [account, githubUser, session]);
 
   return (
     <div className="min-h-screen p-4 md:p-8" style={{ background: "var(--background)", color: "var(--foreground)" }}>
@@ -217,9 +243,9 @@ export default function GuestbookPage() {
               <input
                 type="text"
                 value={authorName}
-                onChange={(e) => setAuthorName(e.target.value)}
+                readOnly
                 placeholder={t.namePlaceholder}
-                className="w-full px-4 py-2 rounded-md"
+                className="w-full px-4 py-2 rounded-md opacity-70 cursor-not-allowed"
                 style={{
                   background: "var(--background)",
                   border: "1px solid var(--card-border)",
@@ -277,22 +303,79 @@ export default function GuestbookPage() {
                   <div className="flex items-center gap-3">
                     <p className="text-xs muted">{new Date(msg.created_at).toLocaleDateString()}</p>
                     {isOwner && (
-                      <button
-                        onClick={() => handleDelete(msg.id)}
-                        className="p-2 rounded-md hover:opacity-80 transition-opacity"
-                        style={{
-                          background: "#ef4444",
-                          color: "#fff",
-                          border: "1px solid #dc2626"
-                        }}
-                        title={t.delete}
-                      >
-                        <FaTrash className="w-3 h-3" />
-                      </button>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => { setEditingId(msg.id); setEditingContent(msg.message); }}
+                          className="p-2 rounded-md hover:opacity-80 transition-opacity"
+                          style={{ background: '#10b981', color: '#fff', border: '1px solid #059669' }}
+                          title={language === 'en' ? 'Edit' : '编辑'}
+                        >
+                          <FaEdit className="w-3 h-3" />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(msg.id)}
+                          className="p-2 rounded-md hover:opacity-80 transition-opacity"
+                          style={{
+                            background: "#ef4444",
+                            color: "#fff",
+                            border: "1px solid #dc2626"
+                          }}
+                          title={t.delete}
+                        >
+                          <FaTrash className="w-3 h-3" />
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>
-                <p className="whitespace-pre-wrap">{msg.message}</p>
+                {isOwner && editingId === msg.id ? (
+                  <div className="mt-2">
+                    <textarea
+                      value={editingContent}
+                      onChange={(e) => setEditingContent(e.target.value)}
+                      rows={3}
+                      className="w-full px-3 py-2 rounded-md"
+                      style={{ background: "var(--background)", border: "1px solid var(--card-border)", color: "var(--foreground)" }}
+                    />
+                    <div className="mt-2 flex gap-2">
+                      <button
+                        onClick={async () => {
+                          const hasAuth = !!account || !!githubUser;
+                          if (!hasAuth) return alert(language === 'en' ? 'Please sign in' : '请先登录');
+                          try {
+                            const res = await fetch('/api/guestbook', {
+                              method: 'PUT',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({ id: msg.id, content: editingContent, address: account, github: githubUser })
+                            });
+                            const { error } = await res.json();
+                            if (error) throw new Error(error);
+                            setEditingId(null);
+                            setEditingContent('');
+                            loadMessages();
+                          } catch (error) {
+                            alert(language === 'en' ? 'Update failed' : '更新失败');
+                          }
+                        }}
+                        className="p-2 rounded-md hover:opacity-80 transition-opacity"
+                        style={{ background: '#10b981', color: '#fff', border: '1px solid #059669' }}
+                        title={language === 'en' ? 'Submit' : '提交'}
+                      >
+                        <FaCheck className="w-3 h-3" />
+                      </button>
+                      <button
+                        onClick={() => { setEditingId(null); setEditingContent(''); }}
+                        className="p-2 rounded-md hover:opacity-80 transition-opacity"
+                        style={{ background: '#374151', color: '#fff', border: '1px solid #4b5563' }}
+                        title={language === 'en' ? 'Cancel' : '取消'}
+                      >
+                        <FaTimes className="w-3 h-3" />
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="whitespace-pre-wrap">{msg.message}</p>
+                )}
               </div>
             ))
           )}

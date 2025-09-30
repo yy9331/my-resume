@@ -120,6 +120,16 @@ See `scripts/init-database.sql` for the complete SQL script.
   - Format: `postgresql://username:password@host:port/database`
   - Example: `postgresql://user:pass@localhost:5432/cv_database`
 
+- `NEXTAUTH_SECRET`: Secret used to sign and encrypt NextAuth JWT/session
+  - Generate locally: `openssl rand -base64 32`
+
+- `NEXTAUTH_URL`: The canonical application URL
+  - Local: `http://localhost:3000`
+  - Production: `https://your-project.vercel.app`
+
+- `GITHUB_ID`: GitHub OAuth Client ID
+- `GITHUB_SECRET`: GitHub OAuth Client Secret
+
 ### Optional
 
 - `DATABASE_SSL`: Enable SSL for database connection (`true` or `false`, default: `false`)
@@ -138,6 +148,10 @@ Or use Vercel CLI:
 ```bash
 vercel env add DATABASE_URL
 vercel env add DATABASE_SSL
+vercel env add NEXTAUTH_SECRET
+vercel env add NEXTAUTH_URL
+vercel env add GITHUB_ID
+vercel env add GITHUB_SECRET
 ```
 
 ---
@@ -190,13 +204,57 @@ The guestbook allows visitors to leave messages with wallet or GitHub authentica
 
 **Authentication Methods**:
 - **Wallet**: Connect MetaMask or compatible Web3 wallet
-- **GitHub**: Simple username-based auth (can be upgraded to OAuth)
+- **GitHub (SSO)**: Sign in via GitHub OAuth using NextAuth.js
 
 **Usage**:
 1. Click **Settings** button (top right)
 2. Click **Guestbook** → **Open**
 3. Sign in with wallet or GitHub
 4. Leave a message with your name
+
+Notes:
+- When authenticated, the display name is locked to your identity:
+  - Wallet sign-in → address as name
+  - GitHub sign-in → GitHub username as name
+- Owner privileges (wallet `0xea1e...e76b` or GitHub `yy9331`): view/delete all messages and inline edit message content (except author name).
+
+### Authentication (GitHub OAuth SSO)
+
+This project uses NextAuth.js with the GitHub provider.
+
+1) Create a GitHub OAuth App
+
+- Open GitHub Developer Settings → OAuth Apps → New OAuth App
+- Local development values:
+  - Application name: My CV Guestbook
+  - Homepage URL: `http://localhost:3000`
+  - Authorization callback URL: `http://localhost:3000/api/auth/callback/github`
+- After registering, copy the Client ID and generate a Client Secret
+
+2) Configure env vars
+
+Add to `.env.local`:
+
+```bash
+NEXTAUTH_SECRET=<openssl rand -base64 32>
+NEXTAUTH_URL=http://localhost:3000
+GITHUB_ID=<your_client_id>
+GITHUB_SECRET=<your_client_secret>
+```
+
+3) Start the app and test
+
+```bash
+npm run dev
+# visit http://localhost:3000/guestbook and click "Sign in with GitHub"
+```
+
+4) Production (Vercel)
+
+- Create another GitHub OAuth App for production with:
+  - Homepage URL: `https://your-project.vercel.app`
+  - Callback URL: `https://your-project.vercel.app/api/auth/callback/github`
+- Set envs in Vercel: `NEXTAUTH_URL` to your domain, plus `NEXTAUTH_SECRET`, `GITHUB_ID`, `GITHUB_SECRET`
 
 ### PDF Export
 

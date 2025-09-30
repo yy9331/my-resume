@@ -1,19 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BackgroundAnim from "./components/BackgroundAnim";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { WalletProvider } from "./contexts/WalletContext";
+import SessionProvider from "./components/SessionProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Yu Yi (Yves), cv.zyzy.info, Full Stack DApp Developer",
@@ -40,15 +31,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
         data-theme="dark"
       >
         <BackgroundAnim />
-        <LanguageProvider>
-          <WalletProvider>
-            {children}
-          </WalletProvider>
-        </LanguageProvider>
+        <SessionProvider>
+          <LanguageProvider>
+            <WalletProvider>
+              {children}
+            </WalletProvider>
+          </LanguageProvider>
+        </SessionProvider>
       </body>
     </html>
   );
