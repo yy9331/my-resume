@@ -443,7 +443,9 @@ MIT License - feel free to use this template for your own CV!
 
 - **Email**: yuyi.gz@gmail.com
 - **GitHub**: [@yy9331](https://github.com/yy9331)
-- **Telegram**: [@yy9331](https://t.me/yy9331)
+- **Telegram**: [@yyi9331](https://t.me/yyi9331)
+- **WhatsApp**: [+44 7763 334391](https://wa.me/447763334391)
+- **WeChat**: [WeChat](weixin://dl/chat?13143745768)
 - **X (Twitter)**: [@yy9331](https://x.com/yy9331)
 - **Discord**: yy9331_03247
 

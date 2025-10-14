@@ -293,10 +293,18 @@ ul li:hover::before {
   }
 }
 
-/* 打印时：将链接以 “Label: @URL” 形式展示，仅作用于 http/https 外链 */
+/* 打印时：将链接以 "Label: @URL" 形式展示，仅作用于 http/https 外链 */
 @media print {
   a[href^="http"]::after,
   a[href^="https"]::after {
+    content: ": " attr(href);
+    color: #666 !important;
+    font-size: 11px;
+    margin-left: 2px;
+    word-break: break-all;
+  }
+  /* 微信链接显示其URI，尝试使其在PDF中可点击 */
+  a[href^="weixin://"]::after {
     content: ": " attr(href);
     color: #666 !important;
     font-size: 11px;
