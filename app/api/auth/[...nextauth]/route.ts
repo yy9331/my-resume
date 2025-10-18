@@ -25,9 +25,6 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
   },
-  pages: {
-    signIn: '/guestbook',
-  },
 };
 
 const handler = NextAuth(authOptions);

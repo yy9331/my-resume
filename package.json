@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
-    "db:init": "tsx scripts/init-database.ts"
+    "lint": "eslint"
   },
   "dependencies": {
     "@tsparticles/react": "3.0.0",
@@ -16,7 +15,6 @@
     "jspdf": "3.0.2",
     "next": "15.5.3",
     "next-auth": "^4.24.11",
-    "pg": "8.11.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "4.12.0",
@@ -26,7 +24,6 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/pg": "^8.11.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

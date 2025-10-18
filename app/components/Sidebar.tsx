@@ -116,24 +116,6 @@ export default function Sidebar() {
               </h3>
               <WalletConnect />
             </div>
-
-            {/* 留言板 */}
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium" style={{ color: 'var(--heading)' }}>
-                {t.sidebar.guestbook}
-              </h3>
-              <button
-                onClick={() => router.push('/guestbook')}
-                className="px-3 py-1.5 text-sm rounded-md cursor-pointer"
-                style={{
-                  color: 'var(--heading)',
-                  background: 'var(--card-bg)',
-                  border: '1px solid var(--card-border)'
-                }}
-              >
-                {language === 'en' ? 'Open' : '打开'}
-              </button>
-            </div>
           </div>
         </div>
       </div>
