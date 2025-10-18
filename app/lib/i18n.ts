@@ -45,7 +45,7 @@ export interface ResumeDataI18n {
     details?: string[];
     stack?: string[];
   }[];
-  education: { period: string; school: string; major?: string; degree?: string }[];
+  education: { school: string; major?: string; degree?: string }[];
 }
 
 export const resumeDataEn: ResumeDataI18n = {
@@ -303,7 +303,7 @@ export const resumeDataEn: ResumeDataI18n = {
     }
   ],
   education: [
-    { period: "2003.09 – 2007.07", school: "Guangdong University of Foreign Studies", major: "Business Administration", degree: "Bachelor degree" }
+    { school: "Guangdong University of Foreign Studies", major: "Business Administration", degree: "Bachelor degree" }
   ]
 };
 
@@ -320,10 +320,9 @@ export const resumeDataZh: ResumeDataI18n = {
     { label: "GitHub", url: "https://github.com/yy9331" }
   ],
   summary: [
-    "Web3 全栈交付：Electron 桌面端 + Solidity/Hardhat 与 React/Next.js；wagmi/viem/ethers、WalletConnect 与 EIP‑712、The Graph/Subgraph；Node/Next.js 后端；覆盖链上/链下数据流与性能/安全优化。",
-    "适配远程：善于异步沟通与文档沉淀，可与亚太/欧洲时区重叠工作",
+    "全栈经验丰富, 项目全流程搭建, 部署有丰富经验.",
     "全栈开发8年+经验，深入 React 生态，具备公共 npm package 设计与发布经验。",
-    "服务过世界500强，能英文会议、交流、present与书面往来。"
+    "服务过世界500强，能英文会议、交流、present与书面往来。",
   ],
   strengths: [
     "快速响应与重构能力：能结合 AI 建议进行前端组件重构与优化",
@@ -565,7 +564,7 @@ export const resumeDataZh: ResumeDataI18n = {
     }
   ],
   education: [
-    { period: "2003.09 – 2007.07", school: "广东外语外贸大学 (双一流)", major: "工商管理", degree: "统招本科" }
+    { school: "广东外语外贸大学 (双一流)", major: "工商管理", degree: "统招本科" }
   ]
 };
 

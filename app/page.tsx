@@ -63,10 +63,8 @@ export default function Home() {
         <Section title={t.sections.education}>
           <ul className="list-disc pl-5 text-sm text-zinc-300">
             {resumeData.education.map((e) => (
-              <li key={e.period} className="mb-1">
+              <li key={e.school} className="mb-1">
                 <div className="flex flex-wrap items-center gap-1 text-sm">
-                  <span className="text-amber-400 font-medium">{e.period}</span>
-                  <span>·</span>
                   <span className="font-medium">{e.school}</span>
                   {e.major && (
                     <>
