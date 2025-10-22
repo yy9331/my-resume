@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lib/i18n";
 import ThemeToggle from "./ThemeToggle";
@@ -9,7 +8,6 @@ import LanguageSwitch from "./LanguageSwitch";
 import WalletConnect from "./WalletConnect";
 
 export default function Sidebar() {
-  const router = useRouter();
   const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const t = translations[language];

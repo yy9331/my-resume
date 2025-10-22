@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Header from "./components/Header";
 import { Section } from "./components/Section";
 import Experience from "./components/Experience";
@@ -14,20 +14,12 @@ export default function Home() {
   const { language } = useLanguage();
   const resumeData = language === 'en' ? resumeDataEn : resumeDataZh;
   const t = translations[language];
-  const [tabInfo, setTabInfo] = useState<{ title: string; url: string }>({ title: "", url: "" });
-
-  useEffect(() => {
-    setTabInfo({ title: document.title, url: window.location.href });
-  }, []);
-
   // 根据语言动态设置浏览器标签标题（用于打印页眉与可读性）
   useEffect(() => {
     const site = "https://zyzy.info";
     const newTitle = `${resumeData.name} | ${resumeData.title} | ${site}`;
     document.title = newTitle;
-    // 同步到打印小字
-    setTabInfo((prev) => ({ ...prev, title: newTitle }));
-  }, [language]);
+  }, [language, resumeData.name, resumeData.title]);
 
   return (
     <div className="min-h-screen" style={{ background: "var(--background)", color: "var(--foreground)" }}>

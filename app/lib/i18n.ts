@@ -73,7 +73,7 @@ export const resumeDataEn: ResumeDataI18n = {
   ],
   experiences: [
     {
-      period: "2024.06 – Present",
+      period: "2024.06 – 2025.09",
       company: "Rain Protocol",
       role: "Senior DApp Engineer (DeFi Lending)",
       bullets: [
@@ -90,7 +90,7 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["DeFi Lending", "Solana", "@solana/web3.js", "Wallet Adapter", "React", "Next.js", "TypeScript"]
     },
     {
-      period: "2022.03 – 2024.05",
+      period: "2023.03 – 2024.05",
       company: "Bunni Protocol",
       role: "Senior DApp Engineer (DEX)",
       bullets: [
@@ -107,7 +107,20 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["Uniswap v4 Hooks", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
     },
     {
-      period: "2021.07 – 2022.03",
+      period: "2024.06 – 2025.06",
+      company: "Guangzhou Friendship Foreign Service Co., Ltd.",
+      role: "Cathay Pacific CXA Project Team Frontend Developer",
+      bullets: [
+        "Led frontend development for Cathay Pacific CXA project, built reusable frontend component library, improving team development efficiency by 30%+",
+        "Combined AI tools for code refactoring and optimization, enhanced existing component performance by 25% with significantly improved maintainability",
+        "Independently completed complex business component refactoring, collaborated efficiently with product and design teams to ensure on-time delivery",
+        "Quickly adapted to UX design changes, rapidly adjusted interaction logic during mid-project designer transition while maintaining development progress",
+        "Proficiently handled multi-tech stack switching in microservice architecture, including rapid onboarding and development with React, Vue, Angular frameworks"
+      ],
+      stack: ["React", "TypeScript", "Frontend Library", "Microservice Architecture", "AI-Assisted Development"]
+    },
+    {
+      period: "2022.06 – 2024.02",
       company: "Symbio (China) Co., Ltd. · HSBC Investment Banking MSS-FICC-MKTY Project Team",
       role: "Full Stack Developer",
       bullets: [
@@ -118,6 +131,36 @@ export const resumeDataEn: ResumeDataI18n = {
         "Scala for app data request layer; SQL task optimization; Oracle and MongoDB integration"
       ],
       stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java Microservices", "MongoDB", "E2E Automated Testing(Cypress)"]
+    },
+    {
+      period: "2021.12 – 2022.06",
+      company: "Zebra Network Technology Co., Ltd.",
+      role: "Automotive Industry Digitalization Full Stack Developer",
+      bullets: [
+        "Led full-stack development for automotive industry digitalization projects, tackled complex frontend technical challenges including CSS3 animations and Canvas graphics rendering",
+        "Implemented high-performance card flip animations, Canvas coloring and other interactive effects, improving user experience by 40%+",
+        "Proficiently utilized React, Rax, Umi and other cross-platform frameworks for project refactoring, supporting unified multi-platform development",
+        "Designed and implemented componentized architecture, extracted common modules into npm packages, reducing duplicate code by 50% and improving team development efficiency",
+        "Built universal component library supporting rapid integration of different project modules, significantly reducing new project development costs",
+        "Conducted in-depth research on micro-frontend qiankun architecture, implemented sandbox environment debugging, successfully applied to large-scale projects",
+        "Adopted agile development methodology, rapidly responded to requirement changes, ensuring on-time project delivery",
+        "Maintained strict control over interface experience quality, meeting high-standard user interface requirements through multiple iteration optimizations"
+      ],
+      stack: ["React", "Rax", "Umi", "Micro-frontend qiankun", "Canvas", "CSS Animation", "npm Package Management"]
+    },
+    {
+      period: "2021.07 – 2021.12",
+      company: "Yunxi Technology Guangzhou Co., Ltd.",
+      role: "Pharmaceutical Business Department Frontend Team Lead",
+      bullets: [
+        "Served as frontend technical lead for pharmaceutical business department, formulated and implemented frontend architecture solutions, optimized business code structure, improving system maintainability",
+        "Designed and packaged universal component library, established component design standards, regularly organized technical sharing sessions, enhancing overall team technical level",
+        "Responsible for project progress control and resource coordination, developed project plans, ensured on-time delivery with 35% improvement in team delivery efficiency",
+        "Established new employee training system, quickly trained 3 junior developers, reducing newcomer onboarding time by 50%",
+        "Built efficient communication mechanisms with clients, product, and UI teams, ensuring accurate requirement understanding and transparent project progress control",
+        "Established frontend development standards and code review processes, significantly improving code quality and team collaboration efficiency"
+      ],
+      stack: ["Frontend Architecture", "Team Management", "Component Packaging", "Technical Sharing", "Project Management"]
     },
     {
       period: "2019.09 – 2021.07",
@@ -269,6 +312,23 @@ export const resumeDataEn: ResumeDataI18n = {
       ]
     },
     {
+      title: "Hongqi Automotive WeChat Mini-Program Marketing Campaign Series",
+      period: "2021.12 – 2022.06",
+      summary: "Annual marketing campaign series for Hongqi mini-program, monthly themed activities to maintain and manage Hongqi car owner relationships, enhancing user engagement.",
+      stack: ["React Native", "Umi", "Canvas", "Ant Design Mobile", "Rax", "DVA", "MongoDB"],
+      details: [
+        "Project Highlights:",
+        "- Intensive development pace, independently completed 12 monthly marketing campaigns with frequent and complex requirement changes",
+        "- Implemented high-difficulty interactive effects: card flip animations, coloring interactions, GIF insertion in interfaces and other complex animations",
+        "- Built comprehensive data tracking system, storing user behavior data in MongoDB for campaign effectiveness analysis",
+        "Technical Achievements:",
+        "- Independently completed 3 large-scale campaign projects, all highly praised by clients",
+        "- Packaged npm utility packages for API requests, significantly improving team development efficiency",
+        "- Optimized Canvas rendering performance, ensuring smooth animations on mobile devices",
+        "- Established automated testing and deployment pipeline, supporting rapid campaign launches"
+      ]
+    },
+    {
       title: "HSBC MSS-FICC-MKTY Electron Desktop Application",
       period: "2021.07 – 2022.03",
       summary: "Monitor foreign exchange/cash/bond trading capital flows; multi-data source aggregation and report generation.",
@@ -320,7 +380,8 @@ export const resumeDataZh: ResumeDataI18n = {
     { label: "GitHub", url: "https://github.com/yy9331" }
   ],
   summary: [
-    "全栈经验丰富, 项目全流程搭建, 部署有丰富经验.",
+    "Web3 全栈交付：Electron 桌面端 + Solidity/Hardhat 与 React/Next.js；wagmi/viem/ethers、WalletConnect 与 EIP‑712、The Graph/Subgraph；Node/Next.js 后端；覆盖链上/链下数据流与性能/安全优化。",
+    "适配远程：善于异步沟通与文档沉淀，可与亚太/欧洲时区重叠工作",
     "全栈开发8年+经验，深入 React 生态，具备公共 npm package 设计与发布经验。",
     "服务过世界500强，能英文会议、交流、present与书面往来。",
   ],
@@ -365,7 +426,20 @@ export const resumeDataZh: ResumeDataI18n = {
       stack: ["Uniswap v4 Hook", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
     },
     {
-      period: "2021.07 – 2022.03",
+      period: "2024.06 – 2025.06",
+      company: "广州市友谊对外服务有限公司",
+      role: "国泰航空 CXA 项目组 前端开发",
+      bullets: [
+        "负责国泰航空 CXA 项目前端开发，构建可复用的前端组件库，提升团队开发效率 30%+",
+        "结合 AI 工具进行代码重构与优化，将现有组件性能提升 25%，代码可维护性显著改善",
+        "独立完成复杂业务组件重构，与产品、设计团队高效协作，确保项目按时交付",
+        "快速适应 UX 设计变更，在项目中期设计师更换情况下，迅速调整交互逻辑并保持开发进度",
+        "熟练应对微服务架构下的多技术栈切换，包括 React、Vue、Angular 等框架的快速上手与开发"
+      ],
+      stack: ["React", "TypeScript", "前端Library", "微服务架构", "AI辅助开发"]
+    },
+    {
+      period: "2022.06 – 2024.02",
       company: "信必优（中国）有限公司 · 汇丰银行 投资银行 MSS-FICC-MKTY 项目组",
       role: "全栈开发",
       bullets: [
@@ -376,6 +450,36 @@ export const resumeDataZh: ResumeDataI18n = {
         "Scala 编写 App 数据请求层；调优 SQL 任务；Oracle 与 MongoDB 并用"
       ],
       stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java 微服务", "MongoDB", "E2E Automated Testing(Cypress)"]
+    },
+    {
+      period: "2021.12 – 2022.06",
+      company: "斑马网络技术有限公司",
+      role: "车机产业数字化 全栈开发",
+      bullets: [
+        "负责车机产业数字化项目全栈开发，攻克复杂前端技术难点，包括 CSS3 动画、Canvas 图形渲染等",
+        "实现高性能卡牌翻转动画、Canvas 填色等交互效果，提升用户体验 40%+",
+        "熟练运用 React、Rax、Umi 等跨端框架进行项目重构，支持多端统一开发",
+        "设计并实施组件化架构，将公共模块提取为 npm 包，减少重复代码 50%，提升团队开发效率",
+        "构建通用组件库，支持不同项目模块的快速集成，显著降低新项目开发成本",
+        "深入研究微前端 qiankun 架构，实现沙箱环境调试，成功应用于大型项目中",
+        "采用敏捷开发模式，快速响应需求变更，确保项目按时交付",
+        "严格把控界面体验质量，通过多次迭代优化，满足高标准的用户界面要求"
+      ],
+      stack: ["React", "Rax", "Umi", "微前端qiankun", "Canvas", "CSS动画", "npm包管理"]
+    },
+    {
+      period: "2021.07 – 2021.12",
+      company: "云徙科技广州有限公司",
+      role: "医药业务部 前端组长",
+      bullets: [
+        "担任医药业务部前端技术负责人，制定并实施前端架构方案，优化业务代码结构，提升系统可维护性",
+        "设计并封装通用组件库，建立组件设计规范，定期组织技术分享，提升团队整体技术水平",
+        "负责项目进度管控与资源协调，制定开发计划，确保项目按时交付，团队交付效率提升 35%",
+        "建立新人培训体系，快速培养 3 名初级开发者，缩短新人上手时间 50%",
+        "与客户方、产品、UI 团队建立高效沟通机制，确保需求理解准确，项目进展透明可控",
+        "建立前端开发规范与代码审查流程，显著提升代码质量与团队协作效率"
+      ],
+      stack: ["前端架构", "团队管理", "组件封装", "技术分享", "项目管理"]
     },
     {
       period: "2019.09 – 2021.07",
@@ -528,7 +632,23 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 风险评估系统：实时计算流动性风险并提供智能参数推荐"
       ]
     },
-    
+    {
+      title: "红旗汽车车机微信小程序系列活动",
+      period: "2021.12 – 2022.06",
+      summary: "红旗小程序年度营销系列活动，每月主题活动，维护和管理红旗车主关系，提升用户粘性。",
+      stack: ["React Native", "Umi", "Canvas", "Ant Design Mobile", "Rax", "DVA", "MongoDB"],
+      details: [
+        "项目亮点：",
+        "- 开发节奏紧凑，独立完成 12 个月度营销活动，需求变化频繁且复杂",
+        "- 实现高难度交互效果：翻卡动效、填色互动、界面 GIF 插入等复杂动画",
+        "- 构建完整数据埋点体系，用户行为数据存储于 MongoDB，支持活动效果分析",
+        "技术成果：",
+        "- 独立完成 3 个大型活动项目，均获得委托方高度好评",
+        "- 封装 npm 工具包用于接口请求，显著提升团队开发效率",
+        "- 优化 Canvas 渲染性能，确保移动端动画流畅度",
+        "- 建立自动化测试与部署流水线，支持快速活动上线"
+      ]
+    },
     {
       title: "汇丰银行 MSS-MKTY Electron 桌面应用",
       period: "2021.07 – 2022.03",

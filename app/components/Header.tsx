@@ -39,6 +39,8 @@ export default function Header() {
             <span className="ml-0 md:ml-3 block md:inline text-sm md:text-base muted">{resumeData.title}</span>
           </h1>
           <div className="mt-2 text-sm muted flex flex-wrap gap-x-4 gap-y-1 items-center">
+            <span className="flex items-center gap-1"><FiPhone /> {resumeData.contacts.phone}</span>
+            <span className="flex items-center gap-1"><FiMapPin /> {resumeData.contacts.location}</span>
             {resumeData.contacts.emails.map((e) => (
               <Link key={e} href={`mailto:${e}`} className="custom-link flex items-center gap-1"><FiMail /> {e}</Link>
             ))}
@@ -47,8 +49,6 @@ export default function Header() {
             <Link href="weixin://dl/chat?13143745768" target="_blank" className="custom-link flex items-center gap-1"><FaWeixin />WeChat</Link>
             <Link href="https://x.com/yy9331" target="_blank" className="custom-link flex items-center gap-1"><FaXTwitter />@yy9331</Link>
             <Link href="https://discord.com/users/yy9331_03247" target="_blank" className="custom-link flex items-center gap-1"><FaDiscord />@yy9331_03247</Link>
-            <span className="flex items-center gap-1"><FiMapPin /> {resumeData.contacts.location}</span>
-            <span className="flex items-center gap-1"><FiPhone /> {resumeData.contacts.phone}</span>
           </div>
 
           <div className="mt-3 flex flex-wrap items-center gap-3">
