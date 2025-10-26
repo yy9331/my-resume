@@ -82,7 +82,7 @@ export const resumeDataEn: ResumeDataI18n = {
         "Develop lending SDK and API integrations for third‑party developers",
         "Protocol TVL surpassed $10M with rapid user growth",
         "SDK adopted and integrated by multiple DeFi projects",
-        "Built wallet flows with @solana/web3.js, EIP‑712 typed‑data signing, permit patterns",
+        "Built wallet flows with @solana/web3.js, native Solana transaction signing and authorization",
         "Hardhat based CI pipeline: unit/integration tests, mainnet forking, coverage and gas‑report",
         "Auth & data: Subgraph/The Graph for analytics, optimized RPC usage (batch, caching)",
         "Improved critical paths by ~25% through gas & network optimization"
@@ -100,7 +100,7 @@ export const resumeDataEn: ResumeDataI18n = {
         "Improved LP APR by 20%+ through optimization",
         "Helped several projects migrate from Uniswap v2/SushiSwap to v3 for capital efficiency",
         "Participated in protocol security review and risk control mechanism design",
-        "Designed typed‑data schemas and signing/verification flows aligning with backend/solidity",
+        "Designed EIP‑712 typed‑data schemas and signing/verification flows with permit authorization patterns",
         "Set up feature flags/remote config for safe, incremental rollouts in production",
         "Async remote collaboration across time zones; PRD → design → implementation → docs handover"
       ],
@@ -401,7 +401,7 @@ export const resumeDataZh: ResumeDataI18n = {
         "开发借贷 SDK 与 API 集成，服务第三方开发者",
         "协议 TVL 突破 1000 万美元，用户增长迅速",
         "借贷 SDK 被多个 DeFi 项目集成使用",
-        "接入 @solana/web3.js 钱包与签名流程，EIP‑712 typed‑data、permit 等模式",
+        "接入 @solana/web3.js 钱包与签名流程，实现 Solana 原生交易签名与授权",
         "基于 Hardhat 构建 CI：单测/集成测试、主网分叉、覆盖率与 gas report",
         "数据与分析：使用 The Graph/Subgraph；优化 RPC（批处理、缓存）",
         "通过 gas 与网络优化将关键链路耗时下降约 25%"
@@ -419,7 +419,7 @@ export const resumeDataZh: ResumeDataI18n = {
         "成功实现 LP 盈利优化，提升流动性提供者收益率 20%+",
         "帮助多个项目从 Uniswap v2/SushiSwap 迁移至 v3，提升资本效率",
         "参与协议安全审计与风控机制设计",
-        "设计签名结构并与后端/合约对齐，保障 EIP‑712 验签与权限安全",
+        "设计 EIP‑712 typed‑data 签名结构并与后端/合约对齐，实现 permit 授权模式与权限安全",
         "建立功能开关与灰度策略，确保生产环境稳健迭代",
         "远程协作：跨时区异步推进 PRD/设计/实现/文档交接"
       ],

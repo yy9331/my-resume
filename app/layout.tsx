@@ -7,7 +7,7 @@ import SessionProvider from "./components/SessionProvider";
 
 
 export const metadata: Metadata = {
-  title: "Yu Yi (Yves), cv.zyzy.info, Full Stack DApp Developer",
+  title: "Yu Yi (Yves), resume.zyzy.info, Full Stack DApp Developer",
   description: "余翼 · 全栈工程师（React/Next.js/Electron/Node）",
   icons: {
     icon: '/favicon.ico',

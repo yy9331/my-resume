@@ -12,7 +12,7 @@ export default function PdfButton() {
 
     // Only translate the existing title when current language is Chinese
     const translatedTitle = language === 'zh'
-      ? `${resumeDataZh.name}, cv.zyzy.info, ${resumeDataZh.title}`
+      ? `${resumeDataZh.name}, resume.zyzy.info, ${resumeDataZh.title}`
       : previousTitle;
 
     const restoreTitle = () => {

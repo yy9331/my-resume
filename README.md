@@ -1,10 +1,10 @@
-# My CV - Interactive Resume
+# My resume - Interactive Resume
 
 A modern, interactive resume built with Next.js featuring wallet integration and multi-language support.
 
 ## Features
 
-- 📝 **Interactive Resume**: Professional CV with dark/light themes
+- 📝 **Interactive Resume**: Professional resume with dark/light themes
 - 🌍 **Multi-language**: English and Chinese (中文) support
 - 🎨 **Modern UI**: Animated particles background with Tailwind CSS
 - 📄 **PDF Export**: Export resume with localized filenames
@@ -23,7 +23,7 @@ A modern, interactive resume built with Next.js featuring wallet integration and
 1. **Clone and install dependencies**:
    ```bash
    git clone <your-repo-url>
-   cd my-cv
+   cd my-resume
    npm install
    ```
 
@@ -39,12 +39,12 @@ A modern, interactive resume built with Next.js featuring wallet integration and
 ## Project Structure
 
 ```
-my-cv/
+my-resume/
 ├── app/
 │   ├── api/
 │   │   └── auth/              # NextAuth configuration
 │   ├── components/            # React components
-│   │   ├── Header.tsx         # CV header with contact info
+│   │   ├── Header.tsx         # resume header with contact info
 │   │   ├── Experience.tsx     # Work experience section
 │   │   ├── Projects.tsx       # Project showcase
 │   │   ├── Skills.tsx         # Skills grid
@@ -57,7 +57,7 @@ my-cv/
 │   │   └── i18n.ts            # Translations and resume data
 │   ├── globals.css            # Global styles and print CSS
 │   ├── layout.tsx             # Root layout
-│   └── page.tsx               # Main CV page
+│   └── page.tsx               # Main resume page
 ├── public/                    # Static assets
 └── package.json
 ```
@@ -136,7 +136,7 @@ Supported networks:
 
 ## Contributing
 
-This is a personal CV project, but suggestions are welcome!
+This is a personal resume project, but suggestions are welcome!
 
 1. Fork the repository
 2. Create a feature branch
@@ -147,7 +147,7 @@ This is a personal CV project, but suggestions are welcome!
 
 ## License
 
-MIT License - feel free to use this template for your own CV!
+MIT License - feel free to use this template for your own resume!
 
 ---
 
