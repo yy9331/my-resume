@@ -392,7 +392,7 @@ export const resumeDataZh: ResumeDataI18n = {
   ],
   experiences: [
     {
-      period: "2024.06 – 至今",
+      period: "2024.06 – 2024.09",
       company: "Rain Protocol",
       role: "高级DApp工程师（DeFi 借贷方向）",
       bullets: [
