@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { translations, resumeDataZh } from "../lib/i18n";
+import { translations, resumeDataZh, resumeDataEn } from "../lib/i18n";
 
 export default function PdfButton() {
   const { language } = useLanguage();
@@ -10,10 +10,20 @@ export default function PdfButton() {
   const onExport = () => {
     const previousTitle = document.title;
 
-    // Only translate the existing title when current language is Chinese
-    const translatedTitle = language === 'zh'
-      ? `${resumeDataZh.name}, resume.zyzy.info, ${resumeDataZh.title}`
-      : previousTitle;
+    // Build language-aware, sanitized title to influence the saved PDF filename
+    const sanitize = (input: string) => {
+      // Replace characters not allowed in file names across OS
+      const removed = input.replace(/[\/:*?"<>|]/g, " ");
+      // Collapse multiple spaces and trim
+      return removed.replace(/\s+/g, " ").trim();
+    };
+
+    const siteLabel = "resume.zyzy.info";
+    const rawTitle = language === 'zh'
+      ? `${resumeDataZh.name} ${siteLabel} ${resumeDataZh.title}`
+      : `${resumeDataEn.name} ${siteLabel} ${resumeDataEn.title}`;
+
+    const translatedTitle = sanitize(rawTitle) || previousTitle;
 
     const restoreTitle = () => {
       document.title = previousTitle;
