@@ -16,7 +16,7 @@ export default function Home() {
   const t = translations[language];
   // 根据语言动态设置浏览器标签标题（用于打印页眉与可读性）
   useEffect(() => {
-    const site = "https://resume.zyzy.info";
+    const site = "https://my-cex.zyzy.info";
     const newTitle = `${resumeData.name} | ${resumeData.title} | ${site}`;
     document.title = newTitle;
   }, [language, resumeData.name, resumeData.title]);
