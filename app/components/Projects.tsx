@@ -6,10 +6,8 @@ import Chip from "./Chip";
 type ProjectItem = ResumeDataI18n["projects"][number];
 
 export default function Projects({ items }: { items: ProjectItem[] }) {
-  return (
-    <div className="grid md:grid-cols-2 gap-4">
-      {items.map((p) => (
-        <div key={p.title} className="card p-4">
+  const renderCard = (p: ProjectItem) => (
+    <div key={p.title} className="card p-4">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <h3 className="text-base font-semibold">{p.title}</h3>
             {p.period && <span className="text-xs muted">{p.period}</span>}
@@ -49,7 +47,11 @@ export default function Projects({ items }: { items: ProjectItem[] }) {
             </div>
           )}
         </div>
-      ))}
+  );
+
+  return (
+    <div className="flex flex-col gap-4">
+      {items.map(renderCard)}
     </div>
   );
 }
