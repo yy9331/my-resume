@@ -91,6 +91,25 @@ export const resumeDataEn: ResumeDataI18n = {
     },
     {
       period: "2023.03 – 2024.05",
+      company: "CEEX.com Exchange",
+      role: "Senior DApp Engineer",
+      bullets: [
+        "Perpetual contract system development",
+        "Multi-chain data synchronization support for BSC, TRON and other chains",
+        "Maintained on-chain oracle data",
+        "Launchpad project incubation module",
+        "Completed core business process development from internal/external listing project incubation to market launch",
+        "Solved the problem of large price spread when migrating liquidity to external markets",
+        "MPC private key custody module",
+        "Completed user custody wallet asset management",
+        "Integrated SDK for custody wallet",
+        "Staking yield aggregator",
+        "Completed multi-ecosystem asset management and yield distribution"
+      ],
+      stack: ["Perpetual Contracts", "Multi-chain (BSC/TRON)", "Oracle", "Launchpad", "MPC Custody", "React", "TypeScript", "Next.js"]
+    },
+    {
+      period: "2023.03 – 2024.05",
       company: "Bunni Protocol",
       role: "Senior DApp Engineer (DEX)",
       bullets: [
@@ -283,7 +302,7 @@ export const resumeDataEn: ResumeDataI18n = {
   projects: [
     {
       title: "Rain.fi - Solana Decentralized Lending Protocol",
-      period: "2023.08 – 2025.01",
+      period: "2024.05 – 2025.09",
       summary: "A Solana-based decentralized lending protocol focusing on token and NFT lending.",
       stack: ["Solana", "React 18+", "Next.js 13+", "TypeScript 5+", "DeFi"],
       details: [
@@ -294,6 +313,42 @@ export const resumeDataEn: ResumeDataI18n = {
         "Core Module Development:",
         "- Trade builder: orchestrate complex Solana Program calls",
         "- Business modules: JLP collateral, lending parameter optimization, risk management"
+      ]
+    },
+    {
+      title: "CEEX.com CEX Exchange Platform",
+      period: "2023.03 – 2024.05",
+      summary: "Full-featured digital asset trading platform supporting spot/contract trading, multi-chain assets, launchpad, and comprehensive user services.",
+      stack: ["React", "TypeScript", "Next.js", "WebSocket", "TradingView", "Multi-chain (BSC/TRON)", "KYC", "2FA", "React Native"],
+      details: [
+        "Trading System:",
+        "- Spot trading: depth chart, candlestick charts, real-time order book updates",
+        "- Contract trading: leverage trading, futures/perpetual contracts interface",
+        "- Order management: limit orders, market orders, stop-loss/take-profit and advanced order types",
+        "- Trading bots: grid trading, DCA strategies and automated trading tools",
+        "Market Data & Analytics:",
+        "- Real-time market panel: WebSocket push, multi-currency monitoring",
+        "- Chart system: integrated TradingView or custom-built candlestick charts",
+        "- Market analysis tools: technical indicators, depth analysis, capital flow tracking",
+        "Asset Management:",
+        "- Wallet system: deposit, withdrawal, transfer functions",
+        "- Asset overview: multi-currency asset display, profit statistics",
+        "- Transaction history: trading records, fund movement history",
+        "- Financial products: display and purchase of time deposits and fixed-term products",
+        "User System & Security:",
+        "- Identity verification: KYC real-name authentication flow",
+        "- Security center: 2FA, security settings, login management",
+        "- Personal center: preference settings, API key management",
+        "- Referral system: invitation system, commission statistics",
+        "Marketing & Operations:",
+        "- Activity pages: newbie tasks, trading competitions, airdrop events",
+        "- Announcement system: listing announcements, maintenance notifications",
+        "- Help center: beginner guides, FAQ, tutorial documentation",
+        "- Multi-language i18n: support for global users in multiple regions",
+        "Mobile Application:",
+        "- Responsive H5 or native App hybrid development",
+        "- Market push notifications",
+        "- Quick trading features"
       ]
     },
     {
@@ -410,20 +465,22 @@ export const resumeDataZh: ResumeDataI18n = {
     },
     {
       period: "2022.03 – 2024.05",
-      company: "Bunni Protocol",
-      role: "高级DApp工程师（DEX 方向）",
+      company: "CEEX.com 交易所",
+      role: "高级DApp工程师",
       bullets: [
-        "基于 Uniswap v4 hook 构建流动性引擎前端界面",
-        "开发流动性塑形与动态费用调整功能模块",
-        "负责 LP 盈利优化策略的前端实现与数据可视化",
-        "成功实现 LP 盈利优化，提升流动性提供者收益率 20%+",
-        "帮助多个项目从 Uniswap v2/SushiSwap 迁移至 v3，提升资本效率",
-        "参与协议安全审计与风控机制设计",
-        "设计 EIP‑712 typed‑data 签名结构并与后端/合约对齐，实现 permit 授权模式与权限安全",
-        "建立功能开关与灰度策略，确保生产环境稳健迭代",
-        "远程协作：跨时区异步推进 PRD/设计/实现/文档交接"
+        "永续合约系统开发",
+        "支持多链数据同步 BSC、TRON等链",
+        "维护链上预言机数据",
+        "launchpad项目孵化模块",
+        "完成内外盘项目孵化到上市的核心业务流程开发",
+        "解决了迁移流动性到外盘价差大的问题",
+        "MPC私钥托管模块",
+        "完成用户托管钱包资产部分",
+        "对接托管钱包的SDK",
+        "质押收益聚合器",
+        "完成多个生态资产管理收益分配"
       ],
-      stack: ["Uniswap v4 Hook", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
+      stack: ["永续合约", "多链(BSC/TRON)", "预言机", "Launchpad", "MPC托管", "React", "TypeScript", "Next.js"]
     },
     {
       period: "2024.06 – 2025.06",
@@ -604,7 +661,7 @@ export const resumeDataZh: ResumeDataI18n = {
   projects: [
     {
       title: "Rain.fi - Solana 去中心化借贷协议",
-      period: "2023.08 – 2025.01",
+      period: "2024.05 – 2025.09",
       summary: "基于 Solana 的去中心化借贷协议，专注于代币与 NFT 借贷。",
       stack: ["Solana", "React 18+", "Next.js 13+", "TypeScript 5+", "DeFi"],
       details: [
@@ -615,6 +672,42 @@ export const resumeDataZh: ResumeDataI18n = {
         "核心模块开发：",
         "- 交易构建器：处理复杂的 Solana Program 调用逻辑",
         "- 业务开发：JLP 代币抵押、借贷参数优化、风险管理"
+      ]
+    },
+    {
+      title: "CEEX.com 交易所平台",
+      period: "2023.03 – 2024.05",
+      summary: "功能完善的数字资产交易平台，支持现货/合约交易、多链资产、Launchpad 以及完整的用户服务体系。",
+      stack: ["React", "TypeScript", "Next.js", "WebSocket", "TradingView", "多链(BSC/TRON)", "KYC", "双因素认证", "React Native"],
+      details: [
+        "交易系统：",
+        "- 现货交易界面：深度图、K线图、订单簿实时更新",
+        "- 合约交易平台：杠杆交易、期货/永续合约界面",
+        "- 订单管理系统：限价单、市价单、止盈止损等高级订单类型",
+        "- 交易机器人：网格交易、定投策略等自动化交易工具",
+        "行情数据展示：",
+        "- 实时行情面板：WebSocket 推送、多币种监控",
+        "- 图表系统：集成 TradingView 或自研 K 线图表",
+        "- 市场分析工具：技术指标、深度分析、资金流向",
+        "资产管理：",
+        "- 钱包系统：充值、提现、划转功能",
+        "- 资产总览：多币种资产展示、收益统计",
+        "- 账单流水：交易记录、资金变动历史",
+        "- 理财产品：活期、定期理财产品展示与购买",
+        "用户系统：",
+        "- 身份认证：KYC 实名认证流程",
+        "- 安全中心：双因素认证、安全设置、登录管理",
+        "- 个人中心：偏好设置、API 密钥管理",
+        "- 推荐返佣：邀请系统、佣金统计",
+        "营销与运营：",
+        "- 活动页面：新手任务、交易大赛、空投活动",
+        "- 公告系统：上币公告、系统维护通知",
+        "- 帮助中心：新手指南、FAQ、教程文档",
+        "- 多语言国际化：支持全球多地区用户",
+        "移动端应用：",
+        "- 响应式 H5 或原生 App 混合开发",
+        "- 行情推送通知",
+        "- 快捷交易功能"
       ]
     },
     {
