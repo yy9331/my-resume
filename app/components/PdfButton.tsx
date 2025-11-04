@@ -18,10 +18,9 @@ export default function PdfButton() {
       return removed.replace(/\s+/g, " ").trim();
     };
 
-    const siteLabel = "my-cex.zyzy.info";
     const rawTitle = language === 'zh'
-      ? `${resumeDataZh.name} ${siteLabel} ${resumeDataZh.title}`
-      : `${resumeDataEn.name} ${siteLabel} ${resumeDataEn.title}`;
+      ? `${resumeDataZh.name} ${resumeDataZh.title}`
+      : `${resumeDataEn.name} ${resumeDataEn.title}`;
 
     const translatedTitle = sanitize(rawTitle) || previousTitle;
 
