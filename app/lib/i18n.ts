@@ -75,7 +75,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "Senior DApp Engineer (DeFi Lending)",
+      role: "Senior DApp Engineer (DeFi Lending) Remote part-time",
       bullets: [
         "Own the frontend architecture and development for Rain.fi lending protocol",
         "Integrate Solana Programs with the app frontend",
@@ -92,7 +92,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2023.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "Senior DApp Engineer (DEX)",
+      role: "Senior DApp Engineer (DEX) Remote part-time",
       bullets: [
         "Built liquidity engine UI based on Uniswap v4 hooks",
         "Developed liquidity shaping and dynamic fee adjustment modules",
@@ -394,7 +394,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "高级DApp工程师（DeFi 借贷方向）",
+      role: "高级DApp工程师（DeFi 借贷方向）远程工作 兼职",
       bullets: [
         "负责 Rain.fi 借贷协议前端架构与开发",
         "参与 Solana Program 与前端的集成开发",
@@ -411,7 +411,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2022.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "高级DApp工程师（DEX 方向）",
+      role: "高级DApp工程师（DEX 方向）远程工作 兼职",
       bullets: [
         "基于 Uniswap v4 hook 构建流动性引擎前端界面",
         "开发流动性塑形与动态费用调整功能模块",
