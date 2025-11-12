@@ -75,7 +75,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "Senior DApp Engineer (DeFi Lending) Remote",
+      role: "Senior DApp Engineer (DeFi Lending)",
       bullets: [
         "Own the frontend architecture and development for Rain.fi lending protocol",
         "Integrate Solana Programs with the app frontend",
@@ -92,7 +92,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2023.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "Senior DApp Engineer (DEX) Remote",
+      role: "Senior DApp Engineer (DEX)",
       bullets: [
         "Built liquidity engine UI based on Uniswap v4 hooks",
         "Developed liquidity shaping and dynamic fee adjustment modules",
@@ -186,19 +186,19 @@ export const resumeDataEn: ResumeDataI18n = {
       period: "2017.08 – 2018.12",
       company: "Guangzhou Pugu Technology Co., Ltd.",
       role: "Frontend Developer",
-      bullets: []
+      bullets: ["Delivered responsive UI components and integrations across multiple client projects handled by the company."]
     },
     {
       period: "2014.08 – 2017.08",
       company: "Gongcheng Management Consulting Co., Ltd.",
       role: "Bidding and Procurement Data Analysis",
-      bullets: []
+      bullets: ["Prepared procurement data reports and dashboards supporting municipal bidding decisions."]
     },
     {
       period: "2007.07 – 2014.07",
       company: "Zhongjie Communication Co., Ltd.",
       role: "Bidding and Procurement Data Analysis",
-      bullets: []
+      bullets: ["Maintained telecom procurement datasets and ensured compliance documentation accuracy."]
     }
   ],
   skills: {
@@ -312,6 +312,20 @@ export const resumeDataEn: ResumeDataI18n = {
       ]
     },
     {
+      title: "HSBC MSS-FICC-MKTY Electron Desktop Application",
+      period: "2022.06 – 2024.02",
+      summary: "Monitor foreign exchange/cash/bond trading capital flows; multi-data source aggregation and report generation.",
+      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"],
+      details: [
+        "Highlights:",
+        "- Owned full‑stack delivery for several modules in the Electron app (frontend → production)",
+        "- Abstracted reusable utilities/components; improved team delivery efficiency by ~50%",
+        "- Published lightweight npm helpers for API requests to simplify integration",
+        "- Built a Scala‑based request layer; quickly learned Scala and adapted APIs",
+        "- Storage split: Oracle for trades, MongoDB for behavior; tuned SQL/NoSQL queries"
+      ]
+    },
+    {
       title: "Hongqi Automotive WeChat Mini-Program Marketing Campaign Series",
       period: "2021.12 – 2022.06",
       summary: "Annual marketing campaign series for Hongqi mini-program, monthly themed activities to maintain and manage Hongqi car owner relationships, enhancing user engagement.",
@@ -326,20 +340,6 @@ export const resumeDataEn: ResumeDataI18n = {
         "- Packaged npm utility packages for API requests, significantly improving team development efficiency",
         "- Optimized Canvas rendering performance, ensuring smooth animations on mobile devices",
         "- Established automated testing and deployment pipeline, supporting rapid campaign launches"
-      ]
-    },
-    {
-      title: "HSBC MSS-FICC-MKTY Electron Desktop Application",
-      period: "2021.07 – 2022.03",
-      summary: "Monitor foreign exchange/cash/bond trading capital flows; multi-data source aggregation and report generation.",
-      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"],
-      details: [
-        "Highlights:",
-        "- Owned full‑stack delivery for several modules in the Electron app (frontend → production)",
-        "- Abstracted reusable utilities/components; improved team delivery efficiency by ~50%",
-        "- Published lightweight npm helpers for API requests to simplify integration",
-        "- Built a Scala‑based request layer; quickly learned Scala and adapted APIs",
-        "- Storage split: Oracle for trades, MongoDB for behavior; tuned SQL/NoSQL queries"
       ]
     },
     {
@@ -363,7 +363,7 @@ export const resumeDataEn: ResumeDataI18n = {
     }
   ],
   education: [
-    { school: "Guangdong University of Foreign Studies", major: "Business Administration", degree: "Bachelor degree" }
+    { school: "Guangdong University of Foreign Studies", major: "Business Administration", degree: "Bachelor degree (2003 – 2007)" }
   ]
 };
 
@@ -394,7 +394,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "高级DApp工程师（DeFi 借贷方向）远程工作",
+      role: "高级DApp工程师（DeFi 借贷方向）远程工作 兼职",
       bullets: [
         "负责 Rain.fi 借贷协议前端架构与开发",
         "参与 Solana Program 与前端的集成开发",
@@ -411,7 +411,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2022.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "高级DApp工程师（DEX 方向）远程工作",
+      role: "高级DApp工程师（DEX 方向）远程工作 兼职",
       bullets: [
         "基于 Uniswap v4 hook 构建流动性引擎前端界面",
         "开发流动性塑形与动态费用调整功能模块",
@@ -506,19 +506,19 @@ export const resumeDataZh: ResumeDataI18n = {
       period: "2017.08 – 2018.12",
       company: "广州普谷科技有限公司",
       role: "前端开发工程师",
-      bullets: []
+      bullets: ["负责公司承接的多个项目的前端开发，交付响应式组件并对接后端接口。"]
     },
     {
       period: "2014.08 – 2017.08",
       company: "公诚管理咨询有限公司",
       role: "招标采购数据分析",
-      bullets: []
+      bullets: ["整理并分析招标采购数据，输出报表支持政府与企业决策。"]
     },
     {
       period: "2007.07 – 2014.07",
       company: "中捷通信有限公司",
       role: "招标采购数据分析",
-      bullets: []
+      bullets: ["维护通信行业招采数据与合规文档，保障流程合规落地。"]
     }
   ],
   skills: {
@@ -634,6 +634,20 @@ export const resumeDataZh: ResumeDataI18n = {
       ]
     },
     {
+      title: "汇丰银行 MSS-MKTY Electron 桌面应用",
+      period: "2022.06 – 2024.02",
+      summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
+      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB", "E2E Automated Testing(Cypress)"],
+      details: [
+        "亮点：",
+        "- 负责 Electron 应用内多个模块的端到端交付（前端开发直至上线）",
+        "- 抽象通用工具/组件，团队交付效率提升约 50%",
+        "- 发布轻量 npm 工具用于接口请求，降低集成成本",
+        "- 搭建 Scala 请求层，快速学习并按需调整接口",
+        "- 存储分层：交易数据 Oracle、行为数据 MongoDB；按需优化 SQL/NoSQL 查询"
+      ]
+    },
+    {
       title: "红旗汽车车机微信小程序系列活动",
       period: "2021.12 – 2022.06",
       summary: "红旗小程序年度营销系列活动，每月主题活动，维护和管理红旗车主关系，提升用户粘性。",
@@ -648,20 +662,6 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 封装 npm 工具包用于接口请求，显著提升团队开发效率",
         "- 优化 Canvas 渲染性能，确保移动端动画流畅度",
         "- 建立自动化测试与部署流水线，支持快速活动上线"
-      ]
-    },
-    {
-      title: "汇丰银行 MSS-MKTY Electron 桌面应用",
-      period: "2021.07 – 2022.03",
-      summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
-      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB", "E2E Automated Testing(Cypress)"],
-      details: [
-        "亮点：",
-        "- 负责 Electron 应用内多个模块的端到端交付（前端开发直至上线）",
-        "- 抽象通用工具/组件，团队交付效率提升约 50%",
-        "- 发布轻量 npm 工具用于接口请求，降低集成成本",
-        "- 搭建 Scala 请求层，快速学习并按需调整接口",
-        "- 存储分层：交易数据 Oracle、行为数据 MongoDB；按需优化 SQL/NoSQL 查询"
       ]
     },
     {
@@ -685,7 +685,7 @@ export const resumeDataZh: ResumeDataI18n = {
     }
   ],
   education: [
-    { school: "广东外语外贸大学 (双一流)", major: "工商管理", degree: "统招本科" }
+    { school: "广东外语外贸大学 (双一流)", major: "工商管理", degree: "统招本科（2003 – 2007）" }
   ]
 };
 
