@@ -75,7 +75,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "Senior DApp Engineer (DeFi Lending)",
+      role: "Senior DApp Engineer (DeFi Lending) remote",
       bullets: [
         "Own the frontend architecture and development for Rain.fi lending protocol",
         "Integrate Solana Programs with the app frontend",
@@ -92,7 +92,7 @@ export const resumeDataEn: ResumeDataI18n = {
     {
       period: "2023.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "Senior DApp Engineer (DEX)",
+      role: "Senior DApp Engineer (DEX) remote",
       bullets: [
         "Built liquidity engine UI based on Uniswap v4 hooks",
         "Developed liquidity shaping and dynamic fee adjustment modules",
@@ -107,33 +107,7 @@ export const resumeDataEn: ResumeDataI18n = {
       stack: ["Uniswap v4 Hooks", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
     },
     {
-      period: "2024.06 – 2025.06",
-      company: "Guangzhou Friendship Foreign Service Co., Ltd.",
-      role: "Cathay Pacific CXA Project Team Frontend Developer",
-      bullets: [
-        "Led frontend development for Cathay Pacific CXA project, built reusable frontend component library, improving team development efficiency by 30%+",
-        "Combined AI tools for code refactoring and optimization, enhanced existing component performance by 25% with significantly improved maintainability",
-        "Independently completed complex business component refactoring, collaborated efficiently with product and design teams to ensure on-time delivery",
-        "Quickly adapted to UX design changes, rapidly adjusted interaction logic during mid-project designer transition while maintaining development progress",
-        "Proficiently handled multi-tech stack switching in microservice architecture, including rapid onboarding and development with React, Vue, Angular frameworks"
-      ],
-      stack: ["React", "TypeScript", "Frontend Library", "Microservice Architecture", "AI-Assisted Development"]
-    },
-    {
-      period: "2022.06 – 2024.02",
-      company: "Symbio (China) Co., Ltd. · HSBC Investment Banking MSS-FICC-MKTY Project Team",
-      role: "Full Stack Developer",
-      bullets: [
-        "Independent frontend and backend development to production; multiple solution comparisons and optimal solution communication",
-        "Gradually modularized requirements; packaged Export Excel / Date Picker and other plugins",
-        "Optimization and packaging reduced approximately 40% of duplicate code; improved efficiency",
-        "Quickly mastered Electron, Scala, SQL and implemented",
-        "Scala for app data request layer; SQL task optimization; Oracle and MongoDB integration"
-      ],
-      stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java Microservices", "MongoDB", "E2E Automated Testing(Cypress)"]
-    },
-    {
-      period: "2021.12 – 2022.06",
+      period: "2021.12 – 2022.03",
       company: "Zebra Network Technology Co., Ltd.",
       role: "Automotive Industry Digitalization Full Stack Developer",
       bullets: [
@@ -312,20 +286,6 @@ export const resumeDataEn: ResumeDataI18n = {
       ]
     },
     {
-      title: "HSBC MSS-FICC-MKTY Electron Desktop Application",
-      period: "2022.06 – 2024.02",
-      summary: "Monitor foreign exchange/cash/bond trading capital flows; multi-data source aggregation and report generation.",
-      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB"],
-      details: [
-        "Highlights:",
-        "- Owned full‑stack delivery for several modules in the Electron app (frontend → production)",
-        "- Abstracted reusable utilities/components; improved team delivery efficiency by ~50%",
-        "- Published lightweight npm helpers for API requests to simplify integration",
-        "- Built a Scala‑based request layer; quickly learned Scala and adapted APIs",
-        "- Storage split: Oracle for trades, MongoDB for behavior; tuned SQL/NoSQL queries"
-      ]
-    },
-    {
       title: "Hongqi Automotive WeChat Mini-Program Marketing Campaign Series",
       period: "2021.12 – 2022.06",
       summary: "Annual marketing campaign series for Hongqi mini-program, monthly themed activities to maintain and manage Hongqi car owner relationships, enhancing user engagement.",
@@ -394,7 +354,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "高级DApp工程师（DeFi 借贷方向）远程工作 兼职",
+      role: "高级DApp工程师（DeFi 借贷方向）远程工作",
       bullets: [
         "负责 Rain.fi 借贷协议前端架构与开发",
         "参与 Solana Program 与前端的集成开发",
@@ -411,7 +371,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2022.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "高级DApp工程师（DEX 方向）远程工作 兼职",
+      role: "高级DApp工程师（DEX 方向）远程工作",
       bullets: [
         "基于 Uniswap v4 hook 构建流动性引擎前端界面",
         "开发流动性塑形与动态费用调整功能模块",
@@ -425,32 +385,6 @@ export const resumeDataZh: ResumeDataI18n = {
         "远程协作：跨时区异步推进 PRD/设计/实现/文档交接"
       ],
       stack: ["Uniswap v4 Hook", "React 18+", "TypeScript", "Next.js", "wagmi/viem", "ethers.js"]
-    },
-    {
-      period: "2024.06 – 2025.06",
-      company: "广州市友谊对外服务有限公司",
-      role: "国泰航空 CXA 项目组 前端开发",
-      bullets: [
-        "负责国泰航空 CXA 项目前端开发，构建可复用的前端组件库，提升团队开发效率 30%+",
-        "结合 AI 工具进行代码重构与优化，将现有组件性能提升 25%，代码可维护性显著改善",
-        "独立完成复杂业务组件重构，与产品、设计团队高效协作，确保项目按时交付",
-        "快速适应 UX 设计变更，在项目中期设计师更换情况下，迅速调整交互逻辑并保持开发进度",
-        "熟练应对微服务架构下的多技术栈切换，包括 React、Vue、Angular 等框架的快速上手与开发"
-      ],
-      stack: ["React", "TypeScript", "前端Library", "微服务架构", "AI辅助开发"]
-    },
-    {
-      period: "2022.06 – 2024.02",
-      company: "信必优（中国）有限公司 · 汇丰银行 投资银行 MSS-FICC-MKTY 项目组",
-      role: "全栈开发",
-      bullets: [
-        "前后端独立开发至上线；多方案对比并沟通最优解",
-        "将需求逐步插件化；封装 Export Excel / Date Picker 等插件",
-        "优化与封装减少约40%重复代码；提升效率",
-        "快速上手 Electron、Scala、SQL 并落地",
-        "Scala 编写 App 数据请求层；调优 SQL 任务；Oracle 与 MongoDB 并用"
-      ],
-      stack: ["Electron", "React Hooks", "Next.js", "Scala", "SQL", "Java 微服务", "MongoDB", "E2E Automated Testing(Cypress)"]
     },
     {
       period: "2021.12 – 2022.06",
@@ -631,20 +565,6 @@ export const resumeDataZh: ResumeDataI18n = {
         "- 模块化 Hook 系统：自定义 useBunniPool 组合复杂业务逻辑",
         "- 智能缓存策略：Web Worker 处理计算密集任务",
         "- 风险评估系统：实时计算流动性风险并提供智能参数推荐"
-      ]
-    },
-    {
-      title: "汇丰银行 MSS-MKTY Electron 桌面应用",
-      period: "2022.06 – 2024.02",
-      summary: "监测外汇/现金/债权交易资金流；多数据源汇总与报表生成。",
-      stack: ["Electron", "React", "Next.js", "Scala", "SQL", "MongoDB", "E2E Automated Testing(Cypress)"],
-      details: [
-        "亮点：",
-        "- 负责 Electron 应用内多个模块的端到端交付（前端开发直至上线）",
-        "- 抽象通用工具/组件，团队交付效率提升约 50%",
-        "- 发布轻量 npm 工具用于接口请求，降低集成成本",
-        "- 搭建 Scala 请求层，快速学习并按需调整接口",
-        "- 存储分层：交易数据 Oracle、行为数据 MongoDB；按需优化 SQL/NoSQL 查询"
       ]
     },
     {
