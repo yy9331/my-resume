@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--background)", color: "var(--foreground)" }}>
-      <div className="mx-auto max-w-4xl px-5 py-8" id="resume-root">
+      <div className="mx-auto max-w-4xl px-5 py-8 relative z-10" id="resume-root">
         <Header />
 
         <Section title={t.sections.overview}>

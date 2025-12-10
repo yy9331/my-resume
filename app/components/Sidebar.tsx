@@ -4,6 +4,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lib/i18n";
 import ThemeToggle from "./ThemeToggle";
 import PdfButton from "./PdfButton";
+import WordButton from "./WordButton";
 import LanguageSwitch from "./LanguageSwitch";
 import WalletConnect from "./WalletConnect";
 
@@ -99,12 +100,15 @@ export default function Sidebar() {
               <LanguageSwitch />
             </div>
 
-            {/* PDF导出 */}
+            {/* 导出选项 */}
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-medium" style={{ color: 'var(--heading)' }}>
                 {t.sidebar.export}
               </h3>
-              <PdfButton />
+              <div className="flex gap-2">
+                <PdfButton />
+                <WordButton />
+              </div>
             </div>
 
             {/* 钱包连接 */}

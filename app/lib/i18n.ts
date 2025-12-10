@@ -394,7 +394,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2024.06 – 2025.09",
       company: "Rain Protocol",
-      role: "高级DApp工程师（DeFi 借贷方向）远程工作 兼职",
+      role: "高级DApp工程师（DeFi 借贷方向）远程工作",
       bullets: [
         "负责 Rain.fi 借贷协议前端架构与开发",
         "参与 Solana Program 与前端的集成开发",
@@ -411,7 +411,7 @@ export const resumeDataZh: ResumeDataI18n = {
     {
       period: "2022.03 – 2024.05",
       company: "Bunni Protocol",
-      role: "高级DApp工程师（DEX 方向）远程工作 兼职",
+      role: "高级DApp工程师（DEX 方向）远程工作",
       bullets: [
         "基于 Uniswap v4 hook 构建流动性引擎前端界面",
         "开发流动性塑形与动态费用调整功能模块",
@@ -701,7 +701,8 @@ export const translations = {
     buttons: {
       lightTheme: "Light Theme",
       darkTheme: "Dark Theme",
-      exportPdf: "Export PDF",
+      exportPdf: "PDF",
+      exportWord: "Word",
       english: "English",
       chinese: "中文"
     },
@@ -725,7 +726,8 @@ export const translations = {
     buttons: {
       lightTheme: "浅色主题",
       darkTheme: "深色主题",
-      exportPdf: "导出 PDF",
+      exportPdf: "PDF",
+      exportWord: "Word",
       english: "English",
       chinese: "中文"
     },

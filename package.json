@@ -12,6 +12,8 @@
     "@tsparticles/react": "3.0.0",
     "@tsparticles/slim": "3.9.1",
     "critters": "^0.0.23",
+    "docx": "^9.5.1",
+    "file-saver": "^2.0.5",
     "html2canvas": "1.4.1",
     "jspdf": "3.0.2",
     "next": "15.5.3",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
